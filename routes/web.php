@@ -27,6 +27,10 @@ Route::get('/ua-hgb-results', function () {
     return view('ua-hgb-results');
 })->name('ua-hgb-results');
 
+Route::get('/cholinesterase-results', function () {
+    return view('cholinesterase-results');
+})->name('cholinesterase-results');
+
 
 //  Route::get('/dashboard', function () {
 //      return view('dashboard');

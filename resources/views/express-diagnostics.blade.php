@@ -32,7 +32,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="row g-3" method="POST" action="{{ route('express-diagnostics') }}">
+            <form class="row g-3" method="GET" action="{{ route('express-diagnostics') }}">
                 @csrf
                 <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
                 <div class="col-md-12">
