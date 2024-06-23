@@ -73,7 +73,7 @@
             </a>
          </li> 
          <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="{{ url('/users') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                   <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
                </svg>
@@ -81,13 +81,13 @@
             </a>
          </li>
          <li>
-            <a href="{{ url('express-diagnostics') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="{{ url('/diagnostics') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <svg width="25px" height="25px" viewBox="0 0 1.5 1.5" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#4c5665;}.cls-2{fill:#bec3c7;}.cls-3{fill:#d0d7df;}.cls-4{fill:#a4b0c0;}.cls-5{fill:#768ba0;}</style></defs><title/><g data-name="Science" id="Science-2"><path class="cls-1" d="M0.594 0.375A0.625 0.625 0 0 0 0.313 0.439v0.106A0.55 0.55 0 0 1 0.594 0.469a0.563 0.563 0 0 1 0.419 0.938h0.119a0.625 0.625 0 0 0 0.071 -0.134 0.625 0.625 0 0 0 0.046 -0.241A0.659 0.659 0 0 0 0.594 0.375"/><path class="cls-1" height="3" rx="1" ry="1" width="34" x="" y="45" d="M0.031 1.406h1a0.037 0.037 0 0 1 0.031 0.031v0.031a0.037 0.037 0 0 1 -0.031 0.031h-1A0.037 0.037 0 0 1 0 1.469V1.438a0.037 0.037 0 0 1 0.031 -0.031"/><path class="cls-2" height="23" rx="2" ry="2" width="9" x="10" y="6" d="M0.375 0.188h0.156a0.063 0.063 0 0 1 0.063 0.063v0.594a0.063 0.063 0 0 1 -0.063 0.063H0.375a0.063 0.063 0 0 1 -0.063 -0.063V0.25A0.063 0.063 0 0 1 0.375 0.188"/>
                   <path class="cls-3" height="23" rx="2" ry="2" width="9" x="10" y="6" d="M0.375 0.188h0.156a0.063 0.063 0 0 1 0.063 0.063v0.594a0.063 0.063 0 0 1 -0.063 0.063H0.375a0.063 0.063 0 0 1 -0.063 -0.063V0.25A0.063 0.063 0 0 1 0.375 0.188"/><path class="cls-4" d="M0.594 0.25v0.594a0.063 0.063 0 0 1 -0.063 0.063H0.375a0.063 0.063 0 0 1 -0.063 -0.063h0.125A0.063 0.063 0 0 0 0.5 0.781V0.188h0.031a0.063 0.063 0 0 1 0.063 0.063"/><path class="cls-4" height="4" width="3" x="14" y="2" d="M0.438 0.063h0.094v0.125H0.438z"/>
                   <path class="cls-3" points="12 2 14 2 14 6 12 6" d="M0.375 0.063h0.063v0.125H0.375"/>
                   <path class="cls-5" height="2" rx="1" ry="1" width="9" x="10" d="M0.344 0H0.563a0.037 0.037 0 0 1 0.031 0.031A0.037 0.037 0 0 1 0.563 0.063H0.344A0.037 0.037 0 0 1 0.313 0.031 0.037 0.037 0 0 1 0.344 0"/><path class="cls-2" height="2" rx="1" ry="1" width="15" x="7" y="38" d="M0.25 1.188h0.406A0.037 0.037 0 0 1 0.688 1.219 0.037 0.037 0 0 1 0.656 1.25H0.25A0.037 0.037 0 0 1 0.219 1.219 0.037 0.037 0 0 1 0.25 1.188"/><path class="cls-3" height="2" rx="1" ry="1" width="15" x="7" y="38" d="M0.25 1.188h0.406A0.037 0.037 0 0 1 0.688 1.219 0.037 0.037 0 0 1 0.656 1.25H0.25A0.037 0.037 0 0 1 0.219 1.219 0.037 0.037 0 0 1 0.25 1.188"/><path class="cls-5" height="5" width="3" x="13" y="40" d="M0.406 1.25H0.5v0.156H0.406z"/><path class="cls-1" d="M0.375 0.906h0.156V0.938A0.037 0.037 0 0 1 0.5 0.969H0.406A0.037 0.037 0 0 1 0.375 0.938z"/></g>
                </svg>
-               <span class="ms-1">Express Diagnostics</span>
+               <span class="ms-3">Express Diagnostics</span>
             </a>
          </li> 
          <li>
