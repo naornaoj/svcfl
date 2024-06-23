@@ -49,12 +49,19 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('users', UserController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy'])
-    ->middleware(['auth','verified']);
+Route::middleware('auth')->group(function () {
+    Route::get('/users', [UserController::class, 'index'])->name('user.list');
+    Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+    Route::patch('/users', [UserController::class, 'update'])->name('user.update');
+    Route::delete('/users', [UserController::class, 'destroy'])->name('user.destroy');
+});
 
-Route::get('/users/{user}', function (User $user) {
-    return $user;
-})->middleware(['auth', 'verified']);
+// Route::resource('users', UserController::class)
+//     ->only(['index', 'store', 'edit', 'update', 'destroy'])
+//     ->middleware(['auth','verified']);
+
+// Route::get('/users/{user}', function (User $user) {
+//     return $user;
+// })->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
