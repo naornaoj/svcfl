@@ -54,7 +54,6 @@ Route::resource('users', UserController::class)
     ->middleware(['auth','verified']);
 
 Route::get('/users/{user}', function (User $user) {
-    //$user = DB::select('select * from users where id = ?', $id);
     return $user;
 })->middleware(['auth', 'verified']);
 
