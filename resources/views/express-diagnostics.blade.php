@@ -27,12 +27,12 @@
       <!-- Customized Bootstrap Stylesheet -->
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
-      <!-- Template Stylesheet -->
-      <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+      <!-- Template Stylesheet 
+      <link href="{{ asset('css/style.css')}}" rel="stylesheet"> -->
     </head>
     <body>
-        <div class="container">
-            <form class="row g-3" method="GET" action="{{ route('express-diagnostics') }}">
+            <div class="container">
+            <form class="row g-3" method="POST" action="{{ route('express-diagnostics') }}">
                 @csrf
                 <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
                 <div class="col-md-12">
@@ -144,6 +144,7 @@
                         >{{ __('Saved.') }}</p>
                     @endif
                 </div>
+                <input type="submit" class="btn btn-primary btn-lg" name="submit" value="Submit">
 
             </form>
             <!-- Back to Top -->

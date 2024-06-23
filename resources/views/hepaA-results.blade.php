@@ -32,7 +32,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="row g-3 needs-validation" novalidate method="POST" action="{{ route('ua-results') }}">
+            <form class="row g-3 needs-validation" novalidate method="GET" action="{{ route('hepaA-results') }}">
                 @csrf
                 
                 <h1 class="text-center font-bold text-xl mt-4">Patient Details</h1>
@@ -80,125 +80,21 @@
                     <input type="date" class="form-control" id="dateTimeVal">
                 </div>
 
-                <h1 class="text-center font-bold text-xl mt-4" >URINALYSIS</h1>
+                <h1 class="text-center font-bold text-xl mt-4" >HAV Test</h1>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                            <th scope="col">METHOD:URINALYSIS UNCENTRIFUGED SPECIMEN</th>
-                            <th scope="col">RESULT</th>
-                            <th scope="col">REFERENCE</th>
-                            <th scope="col">UNIT</th>
+                            <h5 class="font-bold">Qualitative</h5>
+                            <th scope="col" class="text-center">Method</th>
+                            <th scope="col" class="text-center">Result</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th colspan="4">Physical Characteristics</th>
-                            </tr>
-                            <tr>
-                                <td>Color</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Transparency</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>pH</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Specific Gravity</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th colspan="4">Chemical Characteristics</th>
-                            </tr>
-                            <tr>
-                                <td>Protein</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Glucose</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th colspan="4">Microscopic Findings</th>
-                            </tr>
-                            <tr>
-                                <td>Casts</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Crystals</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>Amorphous</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr> 
-                            <tr>
-                                <td>Micro Organism</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Others</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>W.B.C / hpf</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>R.B.C. / hpf</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>Epithelial Cells</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>Mucus Threads</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Bacteria</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr> 
-                        </tbody>
+                        <tr>
+                            <td class="col-4">Immunochromatographic Assay</td>
+                            <td class="col-3"></td>
                     </table>
+                    <p class="font-bold">Remarks: This is a screening test only. Repeat and/or confirmatory test/s may be required.</p>
                 </div>
 
                 @include('client-pages.licence-footer')

@@ -17,10 +17,15 @@ Route::middleware('guest')->group(function () {
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
-    Route::get('diagnostics', [RegisteredUserController::class, 'create'])
-                ->name('diagnostics');
+    //Route::get('lab-results', [RegisteredUserController::class, 'create'])
+               // ->name('lab-results');
 
-    Route::post('diagnostics', [RegisteredUserController::class, 'store']);
+    //Route::post('lab-results', [RegisteredUserController::class, 'store']);
+
+    //Route::get('express-diagnostics', [RegisteredUserController::class, 'create'])
+               // ->name('express-diagnostics');
+
+    //Route::post('express-diagnostics', [RegisteredUserController::class, 'store']);
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
