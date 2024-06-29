@@ -1,4 +1,4 @@
- <!-- About Start -->
+<!-- About Start -->
  <div id="about" class="container-fluid py-5">
         <div class="container py-5">
             <div class="row g-5">
@@ -50,5 +50,5 @@
                 </div>
             </div>
         </div>
-</div>
-      <!-- About End -->
+ </div>
+<!-- About End -->

@@ -32,7 +32,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="row g-3 needs-validation" novalidate method="POST" action="{{ route('ua-results') }}">
+            <form class="row g-3 needs-validation" novalidate method="POST" action="{{ route('cbc-results') }}">
                 @csrf
                 
                 <h1 class="text-center font-bold text-xl mt-4">Patient Details</h1>
@@ -80,132 +80,97 @@
                     <input type="date" class="form-control" id="dateTimeVal">
                 </div>
 
-                <h1 class="text-center font-bold text-xl mt-4" >URINALYSIS</h1>
+                <h1 class="text-center font-bold text-xl mt-4" >COMPLETE BLOOD COUNT</h1>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                            <th scope="col">METHOD:URINALYSIS UNCENTRIFUGED SPECIMEN</th>
+                            <th scope="col">COMPLETE BLOOD COUNT</th>
                             <th scope="col">RESULT</th>
-                            <th scope="col">REFERENCE</th>
+                            <th scope="col">NORMAL VALUES</th>
                             <th scope="col">UNIT</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th colspan="4">Physical Characteristics</th>
+                                <th colspan="4">Blood Count</th>
                             </tr>
                             <tr>
-                                <td>Color</td>
+                                <td>WHITE BLOOD CELLS</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>4.5-11.0 x 103</td>
+                                <td>UI</td>
                             </tr>
                             <tr>
-                                <td>Transparency</td>
+                                <td>RED BLOOD CELLS</td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <td>uL</td>
                             </tr>
                             <tr>
-                                <td>pH</td>
+                                <td>PLATELET</td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <td>uL</td>
                             </tr>
                             <tr>
-                                <td>Specific Gravity</td>
+                                <td>HEMATOCRIT(HCT)</td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <td>%</td>
                             </tr>
                             <tr>
-                                <th colspan="4">Chemical Characteristics</th>
+                                <td>HEMOGLOBIN</td>
+                                <td></td>
+                                <td></td>
+                                <td>G/dL</td>
                             </tr>
                             <tr>
-                                <td>Protein</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <th colspan="4">Differential Count</th>
                             </tr>
                             <tr>
-                                <td>Glucose</td>
+                                <td>Neutrophil</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>50 - 65</td>
+                                <td>%</td>
                             </tr>
                             <tr>
-                                <th colspan="4">Microscopic Findings</th>
+                                <td>Lymphocyte</td>
+                                <td></td>
+                                <td>20 - 40</td>
+                                <td>%</td>
                             </tr>
                             <tr>
-                                <td>Casts</td>
+                                <td>Monocyte</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>02 – 08</td>
+                                <td>%</td>
                             </tr>
                             <tr>
-                                <td>Crystals</td>
+                                <td>Eosinophil</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>Amorphous</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr> 
-                            <tr>
-                                <td>Micro Organism</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>01 – 03</td>
+                                <td>%</td>
                             </tr>
                             <tr>
-                                <td>Others</td>
+                                <td>Basophil</td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>W.B.C / hpf</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>R.B.C. / hpf</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>Epithelial Cells</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>  
-                            <tr>
-                                <td>Mucus Threads</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>0 – 01</td>
+                                <td>%</td>
                             </tr>
                             <tr>
-                                <td>Bacteria</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr> 
+                                <th colspan="4">BLOOD TYPE WITH RH:</th>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-
-                @include('client-pages.licence-footer')
                 
+                @include('client-pages.licence-footer')
+
                 <div class="col-12">
                     <button type="submit" class="btn btn-success float-end my-4">Print Results</button>
                 </div>
+               
             </form>
         </div>
 

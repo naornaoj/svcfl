@@ -32,7 +32,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="row g-3 needs-validation" novalidate method="POST" action="{{ route('diagnostics') }}">
+            <form class="row g-3 needs-validation" novalidate method="GET" action="{{ route('ua-hgb-results') }}">
                 @csrf
                 
                 <h1 class="text-center font-bold text-xl mt-4">Patient Details</h1>
@@ -220,6 +220,8 @@
                     </table>
                 </div>
 
+                @include('client-pages.licence-footer')
+                
                 <div class="col-12">
                     <button type="submit" class="btn btn-success float-end my-4">Print Results</button>
                 </div>
