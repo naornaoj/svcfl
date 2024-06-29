@@ -75,9 +75,11 @@
             <div class="navbar-nav d-flex float-right">
                 @if (Route::has('login'))
                     @auth
+                        @if (Auth::user()->role == 'admin')
                         <a href="{{ url('/dashboard') }}" class="nav-item nav-link float-end">
                             Dashboard
                         </a>
+                        @endif
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
                             <div class="dropdown-menu bg-light m-0">

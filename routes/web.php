@@ -87,11 +87,6 @@ Route::get('/thyroid-results', function () {
 })->name('thyroid-results');
 
 
-
-//  Route::get('/dashboard', function () {
-//      return view('dashboard');
-//  })->name('dashboard');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -112,13 +107,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/users', [UserController::class, 'update'])->name('user.update');
     Route::delete('/users', [UserController::class, 'destroy'])->name('user.destroy');
 });
-
-// Route::resource('users', UserController::class)
-//     ->only(['index', 'store', 'edit', 'update', 'destroy'])
-//     ->middleware(['auth','verified']);
-
-// Route::get('/users/{user}', function (User $user) {
-//     return $user;
-// })->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
