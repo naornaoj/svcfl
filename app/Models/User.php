@@ -18,6 +18,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'lname',
         'email',
         'password',
         'role'
@@ -34,6 +35,16 @@ class User extends Authenticatable
     ];
 
     /**
+     * Set default values
+     *
+     */
+    protected $attributes = [
+        'isActive' => true,
+        'lname' => '',
+        'role' => 'client'
+    ];
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -42,7 +53,7 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'password' => 'hashed', 
         ];
     }
 }

@@ -15,6 +15,7 @@
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         
         <script>
@@ -30,6 +31,7 @@
             }
 
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     </head>
     <body class="font-sans antialiased">
         @include('layouts.sidebar')
@@ -38,7 +40,11 @@
         <div class="min-h-screen bg-gray-100">
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="p-4 sm:ml-64">
+                    <div class="p-0 mt-14">
+                        {{ $slot }}
+                    </div>
+                </div>
             </main>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
