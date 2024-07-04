@@ -86,14 +86,9 @@ Route::get('/thyroid-results', function () {
     return view('thyroid-results');
 })->name('thyroid-results');
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/users', function () {
-    return view('/admin-pages/users');
-})->middleware(['auth', 'verified'])->name('users');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -101,11 +96,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/users', function () {
+    return view('/admin-pages/users');
+})->middleware(['auth', 'verified'])->name('users');
+
 Route::middleware('auth')->group(function () {
     Route::get('/users', [UserController::class, 'index'])->name('user.list');
     Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
     Route::patch('/users', [UserController::class, 'update'])->name('user.update');
     Route::delete('/users', [UserController::class, 'destroy'])->name('user.destroy');
 });
+
+/*       admin diagnostics pages         */
+Route::get('/diagnostics/bloodtype', function () {
+    return view('/admin-pages/diagnostics/bloodtype');
+    //return view('bloodtype-results');
+})->middleware(['auth', 'verified'])->name('diagnostics.bloodtype');
 
 require __DIR__.'/auth.php';

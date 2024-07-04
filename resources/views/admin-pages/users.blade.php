@@ -1,6 +1,4 @@
 <x-app-layout>
-    
-    
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <div class="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 bg-white dark:bg-gray-900">
             <div>
@@ -123,8 +121,6 @@
         <!-- Edit user modal -->
         @include('admin-pages.partials.edit')
     </div>
-
-
 </x-app-layout>
 
 <script>
@@ -135,7 +131,5 @@
             $('#lname').val(data[0].lname);
             $('#email').val(data[0].email);
         });
-
-        
     }
 </script>
