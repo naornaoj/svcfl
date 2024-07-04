@@ -110,7 +110,11 @@ Route::middleware('auth')->group(function () {
 /*       admin diagnostics pages         */
 Route::get('/diagnostics/bloodtype', function () {
     return view('/admin-pages/diagnostics/bloodtype');
-    //return view('bloodtype-results');
 })->middleware(['auth', 'verified'])->name('diagnostics.bloodtype');
+
+Route::get('/diagnostics/cbc', function () {
+    return view('/admin-pages/diagnostics/cbc');
+    //return view('cbc-results');
+})->middleware(['auth', 'verified'])->name('diagnostics.cbc');
 
 require __DIR__.'/auth.php';
