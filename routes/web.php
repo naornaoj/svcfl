@@ -18,6 +18,8 @@ Route::get('/express-diagnostics', function () {
 // Route::post('/express-diagnostics', function () {
 //     return view('express-diagnostics');
 // })->name('express-diagnostics');
+
+Route::post('/express-diagnostics', [DiagnosticsController::class, 'store'])->name('diagnostics.express');
  
 Route::get('/lab-results', function () {
     return view('/client-pages/lab-results');

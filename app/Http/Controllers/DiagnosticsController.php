@@ -32,15 +32,15 @@ class DiagnosticsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        // $request->validate([
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'age' => ['required', 'string', 'max:255'],
-        //     'gender' => ['required', 'string', 'max:255'],
-        //     'contact' => ['required', 'integer', 'max:255'],
-        //     'address' => ['required', 'integer', 'max:255'],
-        //     'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-        //     'physician' => ['required', 'string', 'max:255'],
-        // ]);
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'age' => ['required', 'string', 'max:255'],
+            'gender' => ['required', 'string', 'max:255'],
+            'contact' => ['required', 'integer', 'max:255'],
+            'address' => ['required', 'integer', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'physician' => ['required', 'string', 'max:255'],
+        ]);
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,

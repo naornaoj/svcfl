@@ -18,7 +18,7 @@ Route::middleware('guest')->group(function () {
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
-    Route::post('/diagnostics/register', [DiagnosticsController::class, 'store'])->name('diagnostics.express');
+    //Route::post('/diagnostics/register', [DiagnosticsController::class, 'store'])->name('diagnostics.express');
 
     //Route::get('lab-results', [RegisteredUserController::class, 'create'])
                // ->name('lab-results');
