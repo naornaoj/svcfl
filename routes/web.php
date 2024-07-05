@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DiagnosticsController;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -14,9 +15,9 @@ Route::get('/express-diagnostics', function () {
     return view('express-diagnostics');
 })->name('express-diagnostics');
 
-Route::post('/express-diagnostics', function () {
-    return view('express-diagnostics');
-})->name('express-diagnostics');
+// Route::post('/express-diagnostics', function () {
+//     return view('express-diagnostics');
+// })->name('express-diagnostics');
  
 Route::get('/lab-results', function () {
     return view('/client-pages/lab-results');
@@ -116,5 +117,7 @@ Route::get('/diagnostics/cbc', function () {
     return view('/admin-pages/diagnostics/cbc');
     //return view('cbc-results');
 })->middleware(['auth', 'verified'])->name('diagnostics.cbc');
+
+
 
 require __DIR__.'/auth.php';
