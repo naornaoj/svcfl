@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\DiagnosticsController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
@@ -22,10 +23,11 @@ Route::middleware('guest')->group(function () {
 
     //Route::post('lab-results', [RegisteredUserController::class, 'store']);
 
-    //Route::get('express-diagnostics', [RegisteredUserController::class, 'create'])
-               // ->name('express-diagnostics');
+    Route::post('express-diagnostics', [DiagnosticsController::class, 'create'])
+                ->name('express-diagnostics');
 
-    //Route::post('express-diagnostics', [RegisteredUserController::class, 'store']);
+    Route::post('express-diagnostics', [DiagnosticsController::class, 'store'])
+                ->name('express-diagnostics');
 
     Route::get('ua-results', [RegisteredUserController::class, 'create'])
                 ->name('ua-results');

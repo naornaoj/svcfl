@@ -37,27 +37,31 @@
                 <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
                 <div class="col-md-12">
                     <label for="name" class="form-label">COMPLETE NAME</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="col-md-6">
                     <label for="age" class="form-label">AGE</label>
-                    <input type="number" class="form-control" id="age">
+                    <input type="number" class="form-control" id="age" name="age" required>
                 </div>
                 <div class="col-md-6">
                     <label for="gender" class="form-label">GENDER</label>
-                    <input type="text" class="form-control" id="gender">
+                    <input type="text" class="form-control" id="gender" name="gender" required>
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">EMAIL</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="contact" class="form-label">CONTACT</label>
+                    <input type="text" class="form-control" id="contact" name="contact" required>
                 </div>
                 <div class="col-md-6">
                     <label for="reqphysician" class="form-label">REQUESTING PHYSICIAN</label>
-                    <input type="text" class="form-control" id="reqphysician">
+                    <input type="text" class="form-control" id="reqphysician" name="reqphysician" required>
                 </div>
                 <div class="col-12">
                     <label for="address" class="form-label">ADDRESS</label>
-                    <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" required>
                 </div>
                 <h3 class=" font-bold text-xl mb-3" >Laboratory Requests</h3>
                 <div class="col-md-6 mt-1">
@@ -131,19 +135,6 @@
                     </select>
                 </div>
 
-                <div class="flex items-center gap-4 mb-2">
-                    <x-primary-button>{{ __('Save') }}</x-primary-button>
-
-                    @if (session('status') === 'diagnostics-saved')
-                        <p
-                            x-data="{ show: true }"
-                            x-show="show"
-                            x-transition
-                            x-init="setTimeout(() => show = false, 2000)"
-                            class="text-sm text-gray-600 dark:text-gray-400"
-                        >{{ __('Saved.') }}</p>
-                    @endif
-                </div>
                 <input type="submit" class="btn btn-primary btn-lg" name="submit" value="Submit">
 
             </form>
