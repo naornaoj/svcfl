@@ -31,10 +31,15 @@
       <link href="{{ asset('css/style.css')}}" rel="stylesheet"> -->
     </head>
     <body>
-            <div class="container">
+            <div class="container rounded">
             <form class="row g-3" method="POST" action="{{ route('express-diagnostics') }}">
                 @csrf
                 <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
                 <div class="col-md-12">
                     <label for="name" class="form-label">COMPLETE NAME</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -112,13 +117,21 @@
                 </div>
                 <div class="col-md-6 mt-1">
                     <!-- Lab request-Package -->
+                 
                     <label class="text-dark">Select a Package Test</label>
-                    <select id="package1" class="form-select mt-3" aria-label="Default select example">
-                        <option selected>Pathology Testing</option>
-                        <option value="1">Microbiology Tests</option>
-                        <option value="2">Biochemistry Tests</option>
-                        <option value="3">Histopatology Tests</option>
+                    <select id="package1" class="form-group" aria-label="Default select example" name ="package1">
+                    <option>Select a Package</option>
+                    @foreach($packages as $data)
+                    <option value="{{ $data->id }}" {{ ( $data->id == $existingRecordId) ? 'selected' : '' }}> {{ $data->packageName }} </option>
+                    @endforeach  
                     </select>
+
+                    <!-- @foreach($packages as $package_each)
+                    <option value="{!! $package_each->id !!}">{!! $package_each->name !!}</option>
+                    @endforeach -->
+
+            
+                    
 
                     <select id="package2" class="form-select mt-3" aria-label="Default select example">
                         <option selected>Pathology Testing</option>
@@ -133,13 +146,19 @@
                         <option value="2">Biochemistry Tests</option>
                         <option value="3">Histopatology Tests</option>
                     </select>
+                    <select id="package4" class="form-select mt-3 my-3" aria-label="Default select example">
+                        <option selected>Pathology Testing</option>
+                        <option value="1">Microbiology Tests</option>
+                        <option value="2">Biochemistry Tests</option>
+                        <option value="3">Histopatology Tests</option>
+                    </select>
                 </div>
 
                 <input type="submit" class="btn btn-primary btn-lg" name="submit" value="Submit">
 
             </form>
             <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-info btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+            <a href="#" class="btn btn-lg btn-info btn-lg-square rounded-circle back-to-top float-end"><i class="bi bi-arrow-up float-right"></i></a>
         </div>
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
