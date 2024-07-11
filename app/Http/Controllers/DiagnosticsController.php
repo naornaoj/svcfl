@@ -7,8 +7,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Diagnostics;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
@@ -53,6 +55,25 @@ class DiagnosticsController extends Controller
         ]);
 
         return redirect(route('express-diagnostics', absolute: false));
+    }
+
+    public function search(Request $request): Response
+    {
+        if(!empty($request->id))
+        {
+            $id = $request->id;
+            $patientInfo = DB::select('select * from diagnostics where id = ? limit 1', [$request->id]);
+            return response($patientInfo);
+        }
+
+        if(!empty($request->name))
+        {
+            $id = $request->id;
+            $patientInfo = DB::select('select * from diagnostics where name = ? limit 1', [$request->name]);
+            return response($patientInfo);
+        }
+
+        return response(''); // Return a response
     }
 
 }
