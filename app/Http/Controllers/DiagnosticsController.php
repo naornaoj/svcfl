@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
-use pp\Http\Controllers\PackagesController;
+use App\Http\Controllers\PackagesController;
 use App\Models\Diagnostics;
 use App\Models\Packages;
 use Illuminate\Auth\Events\Registered;
@@ -34,11 +34,11 @@ class DiagnosticsController extends Controller
     public function create(string $id)
     {
         
-            // $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
-            // return response($diagnostics);
+            $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
+            return response($diagnostics);
             
-            $packages= DB::select('select * from packages where id = ? limit 1', [$id]);
-            return response($packages);
+            // $packages= DB::select('select * from packages where id = ? limit 1', [$id]);
+            // return response($packages);
 
     }
 
@@ -57,11 +57,16 @@ class DiagnosticsController extends Controller
             'contact' => $request->contact,
             'address' => $request->address,
             'email' => $request->email,
-
-            'physician' => $request->physician
+            'reqphysician' =>$request->reqphysician,
+            'package1' =>$request->package1,
+            'package2' =>$request->package2,
+            'package3' =>$request->package3,
+            'package4' =>$request->package4,
         ]);
 
-        return redirect(route('express-diagnostics', absolute: false));
+
+
+        return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
 
     public function search(Request $request): Response
@@ -81,17 +86,9 @@ class DiagnosticsController extends Controller
         }
 
         return response(''); // Return a response
-    }
 
-            'reqphysician' =>$request->reqphysician,
-            'package1' =>$request->package1,
-            'package2' =>$request->package2,
-            'package3' =>$request->package3,
-            'package4' =>$request->package4,
-        ]);
-
+       
         
-        return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
 
      /**
