@@ -30,12 +30,12 @@ class DiagnosticsController extends Controller
     public function create(string $id)
     {
         
-            $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
-            return response($diagnostics);
-
+            // $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
+            // return response($diagnostics);
+            
+            $packages= DB::select('select * from packages where id = ? limit 1', [$id]);
+            return response($packages);
          
-
-        
     }
 
     /**
@@ -77,16 +77,16 @@ class DiagnosticsController extends Controller
      /**
      * Display the specified resource.
      */
-    public function update(string $id)
-    {
-        // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
-        // return response($packages);
+    // public function show(string $id)
+    // {
+    //     // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
+    //     // return response($packages);
 
-        $packages = Packages::where('status', 1)->get();
-                foreach ($packages as $data){
-                    $data->status = 0;
-                    $data->update();
-                }
-    }
+    //     $packages = Packages::where('status', 1)->get();
+    //             foreach ($packages as $data){
+    //                 $data->status = 0;
+    //                 $data->update();
+    //             }
+    // }
 
 }

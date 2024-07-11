@@ -121,14 +121,11 @@
                     <label class="text-dark">Select a Package Test</label>
                     <select id="package1" class="form-group" aria-label="Default select example" name ="package1">
                     <option>Select a Package</option>
-                    @foreach($packages as $data)
-                    <option value="{{ $data->id }}" {{ ( $data->id == $existingRecordId) ? 'selected' : '' }}> {{ $data->packageName }} </option>
-                    @endforeach  
+                    
+                     @foreach($packages as $package_each)
+                    <option value="{{ $package_each->id }}">{{ $package_each->packageName }}</option>
+                    @endforeach 
                     </select>
-
-                    <!-- @foreach($packages as $package_each)
-                    <option value="{!! $package_each->id !!}">{!! $package_each->name !!}</option>
-                    @endforeach -->
 
             
                     
