@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\User;
 use pp\Http\Controllers\PackagesController;
 use App\Models\Diagnostics;
@@ -40,7 +39,7 @@ class DiagnosticsController extends Controller
             
             $packages= DB::select('select * from packages where id = ? limit 1', [$id]);
             return response($packages);
-         
+
     }
 
     /**
@@ -50,16 +49,6 @@ class DiagnosticsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-   
-    //    $request->validate([
-    //         'name' => ['required', 'string', 'max:255'],
-    //         'age' => ['required', 'integer', 'max:255'],
-    //         'gender' => ['required', 'string', 'max:255'],
-    //         'contact' => ['required', 'integer', 'max:255'],
-    //         'address' => ['required', 'String', 'max:255'],
-    //         'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-    //         'reqphysician' => ['required', 'string', 'max:255'],
-    //     ]); 
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -68,6 +57,32 @@ class DiagnosticsController extends Controller
             'contact' => $request->contact,
             'address' => $request->address,
             'email' => $request->email,
+
+            'physician' => $request->physician
+        ]);
+
+        return redirect(route('express-diagnostics', absolute: false));
+    }
+
+    public function search(Request $request): Response
+    {
+        if(!empty($request->id))
+        {
+            $id = $request->id;
+            $patientInfo = DB::select('select * from diagnostics where id = ? limit 1', [$request->id]);
+            return response($patientInfo);
+        }
+
+        if(!empty($request->name))
+        {
+            $id = $request->id;
+            $patientInfo = DB::select('select * from diagnostics where name = ? limit 1', [$request->name]);
+            return response($patientInfo);
+        }
+
+        return response(''); // Return a response
+    }
+
             'reqphysician' =>$request->reqphysician,
             'package1' =>$request->package1,
             'package2' =>$request->package2,
@@ -93,5 +108,6 @@ class DiagnosticsController extends Controller
     //                 $data->update();
     //             }
     // }
+
 
 }

@@ -121,8 +121,6 @@
         <!-- Edit user modal -->
         @include('admin-pages.partials.edit')
     </div>
-
-
 </x-app-layout>
 
 <script>
@@ -133,7 +131,5 @@
             $('#lname').val(data[0].lname);
             $('#email').val(data[0].email);
         });
-
-        
     }
 </script>
