@@ -22,7 +22,6 @@ class DiagnosticsController extends Controller
     public function packagesList()
     {
         $packages = Packages::all();
-        // return view('packages',compact('packages'));
         return view('express-diagnostics', [
             'packages'=>$packages
         ]);
