@@ -1,30 +1,40 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
-use App\Http\Controllers\Controller;
+use App\Models\User;
+use pp\Http\Controllers\PackagesController;
 use App\Models\Diagnostics;
+use App\Models\Packages;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Http\Response;
 
 class DiagnosticsController extends Controller
 {
+    public function packagesList()
+    {
+    	$packages = Packages::all();
+    	return view('packages',compact('packages'));
+    }
     /**
      * Display the user's profile form.
      */
-    public function create(Request $request): View
+    public function create(string $id)
     {
-        $packages = Users::where('user_id', '=', Auth::user()->id)->get();
-        return view('auth.diagnostics');
+        
+            // $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
+            // return response($diagnostics);
+            
+            $packages= DB::select('select * from packages where id = ? limit 1', [$id]);
+            return response($packages);
+
     }
 
     /**
@@ -34,15 +44,6 @@ class DiagnosticsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'age' => ['required', 'string', 'max:255'],
-            'gender' => ['required', 'string', 'max:255'],
-            'contact' => ['required', 'integer', 'max:255'],
-            'address' => ['required', 'integer', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'physician' => ['required', 'string', 'max:255'],
-        ]);
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -51,6 +52,7 @@ class DiagnosticsController extends Controller
             'contact' => $request->contact,
             'address' => $request->address,
             'email' => $request->email,
+
             'physician' => $request->physician
         ]);
 
@@ -75,5 +77,32 @@ class DiagnosticsController extends Controller
 
         return response(''); // Return a response
     }
+
+            'reqphysician' =>$request->reqphysician,
+            'package1' =>$request->package1,
+            'package2' =>$request->package2,
+            'package3' =>$request->package3,
+            'package4' =>$request->package4,
+        ]);
+
+        
+        return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
+    }
+
+     /**
+     * Display the specified resource.
+     */
+    // public function show(string $id)
+    // {
+    //     // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
+    //     // return response($packages);
+
+    //     $packages = Packages::where('status', 1)->get();
+    //             foreach ($packages as $data){
+    //                 $data->status = 0;
+    //                 $data->update();
+    //             }
+    // }
+
 
 }

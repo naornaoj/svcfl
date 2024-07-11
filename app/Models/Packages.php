@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Diagnostics extends Authenticatable
+class Packages extends Authenticatable
 {
     use HasFactory, Notifiable;
 
@@ -17,13 +17,7 @@ class Diagnostics extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'age',
-        'gender',
-        'contact',
-        'address',
-        'email',
-        'reqphysician'
+        'packageName',
     ];
 
     /**
