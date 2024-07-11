@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
+use App\Http\Controllers\DiagnosticsController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -18,6 +19,8 @@ Route::middleware('guest')->group(function () {
                 ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);
+
+    //Route::post('/diagnostics/register', [DiagnosticsController::class, 'store'])->name('diagnostics.express');
 
     //Route::get('lab-results', [RegisteredUserController::class, 'create'])
                // ->name('lab-results');
