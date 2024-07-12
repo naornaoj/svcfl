@@ -63,7 +63,7 @@ class DiagnosticsController extends Controller
             'package4' =>$request->package4,
         ]);
 
-        $package_id = Packages::all('packageName', 'id');
+        $package1 = Packages::all('packageName', 'id');
 
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
