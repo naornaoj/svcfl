@@ -80,7 +80,7 @@
                 <div class="col-md-6 mt-1">
                 <!-- Lab request-Individual -->
                     
-                        <label class="text-dark">Select an Individual Test</label>
+                        <label class="text-dark">Individual Test</label>
                         <select id="individualTest1" class="form-select mt-3" aria-label="Default select example">
                             <option selected>Pathology Testing</option>
                             <option value="1">Microbiology Tests</option>
@@ -125,31 +125,38 @@
                 </div>
                     <div class="col-md-6 mt-1">
                     <!-- Lab request-Package -->
-                    <label class="text-dark">Select a Package Test</label>
-                    <select id="package1" class="form-group" aria-label="Default select example" name ="package1">
+                    <label class="text-dark">Package Test</label>
+                    
+
+                    <select id="package_id" class="form-select mt-3" aria-label="Default select example" name="package1">
+                    @if (!count($packages) < 0)                                  
+                        <strong>    Whoops! Something went wrong </strong>                          
+                    @else
+                        @foreach($packages as $id => $package)
+                            <option value="{{ $package->id }}" selected>{{ $package->packageName }}</option>
+                        @endforeach
+                    @endif
+                    </select>
+
+                    <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
                     <option>Select a Package</option>
-                        @foreach($packages as $package_each)
-                        <option value="{{ $package_each->id }}">{{ $package_each->packageName }}</option>
-                        @endforeach 
-                    </select>
-                
-
-            
-                    
-
-                    <select id="package2" class="form-select mt-3" aria-label="Default select example">
-                        <option selected>Pathology Testing</option>
-                        <option value="1">Microbiology Tests</option>
-                        <option value="2">Biochemistry Tests</option>
-                        <option value="3">Histopatology Tests</option>
+                            @foreach($packages as $package)
+                            <option value="{{ $package->id }}" selected>{{ $package->packageName }}</option>
+                            @endforeach 
                     </select>
                     
-                    <select id="package3" class="form-select mt-3 my-3" aria-label="Default select example">
-                        <option selected>Pathology Testing</option>
-                        <option value="1">Microbiology Tests</option>
-                        <option value="2">Biochemistry Tests</option>
-                        <option value="3">Histopatology Tests</option>
+                    <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package2">
+                    <option>Select a Package</option>
+                            @foreach($packages as $package)
+                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                            @endforeach 
+                    </select>
 
+                    <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package2">
+                    <option>Select a Package</option>
+                            @foreach($packages as $package)
+                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                            @endforeach 
                     </select>
                 </div>
                 <input type="submit" class="btn btn-primary btn-lg" name="submit" value="Submit">

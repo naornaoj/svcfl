@@ -19,7 +19,11 @@ return new class extends Migration
             $table->string('contact');
             $table->string('address');
             $table->string('email');
-            $table->string('physician');
+            $table->string('reqphysician');
+            $table->string('package1');
+            $table->string('package2');
+            $table->string('package3');
+            $table->string('package4');
             $table->timestamps();
         });
     }
