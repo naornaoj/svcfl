@@ -22,9 +22,12 @@ class DiagnosticsController extends Controller
     public function packagesList()
     {
         $packages = Packages::all();
+        $selectedPackage = Packages::first()->package_id;
+    
         return view('express-diagnostics', [
             'packages'=>$packages
         ]);
+
     }
     
     /**

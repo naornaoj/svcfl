@@ -128,16 +128,17 @@
                     <label class="text-dark">Package Test</label>
                     
 
-                    <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
+                    <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package_id">
                     <option>Select a Package</option>
                     @if (!count($packages) > 0)                                  
                         <strong>    Whoops! Something went wrong </strong>                          
                     @else
                         @foreach($packages as $package)
-                            <option value="{{ $package->id }}" {{($package->package1 == $package) ? 'selected' : ''}}>{{ $package->packageName }}</option>
+                            <option value="{{ $package->id }}"  @selected(old('package_id') == $package)>{{ $package->packageName }}</option>
                         @endforeach
                     @endif
                     </select>
+
 
                     <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
                     <option>Select a Package</option>
