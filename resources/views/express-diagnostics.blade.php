@@ -83,9 +83,9 @@
                         <label class="text-dark">Individual Test</label>
                         <select id="individualTest1" class="form-select mt-3" aria-label="Default select example">
                             <option selected>Pathology Testing</option>
-                            <option value="1">Microbiology Tests</option>
-                            <option value="2">Biochemistry Tests</option>
-                            <option value="3">Histopatology Tests</option>
+                            @foreach($individualTest as $individual)
+                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                            @endforeach 
                         </select>
 
                         <select id="individualTest2" class="form-select mt-3" aria-label="Default select example">
@@ -128,18 +128,19 @@
                     <label class="text-dark">Package Test</label>
                     
 
-                    <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package_id">
+                    <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
                     <option>Select a Package</option>
                     @if (!count($packages) > 0)                                  
                         <strong>    Whoops! Something went wrong </strong>                          
                     @else
                         @foreach($packages as $package)
-                            <option value="{{ $package->id }}"  @selected(old('package_id') == $package)>{{ $package->packageName }}</option>
+                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                        
                         @endforeach
+                       
                     @endif
                     </select>
-
-
+                    
                     <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
                     <option>Select a Package</option>
                             @foreach($packages as $package)

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Http\Controllers\PackagesController;
+use App\Http\Controllers\IndivualTestController;
 use App\Models\Diagnostics;
 use App\Models\Packages;
+use App\Models\Individual;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -18,20 +20,8 @@ use Illuminate\Http\Response;
 
 class DiagnosticsController extends Controller
 {
-   
-    public function packagesList()
-    {
-        $packages = Packages::all();
-        $selectedPackage = Packages::first()->package_id;
-    
-        return view('express-diagnostics', [
-            'packages'=>$packages
-        ]);
-
-    }
-    
     /**
-     * Display the user's profile form.
+     * Store the express-diagnostics's input form.
      */
     public function create(string $id)
     {
@@ -71,6 +61,33 @@ class DiagnosticsController extends Controller
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
 
+    /**
+     * Display the packages list.
+     */
+    public function packagesList()
+    {
+        $packages = Packages::all();
+        // $selectedPackage = Packages::findOrFail();
+    
+        return view('express-diagnostics', [
+            'packages'=>$packages
+        ]);
+
+    }
+
+    public function individualTestList()
+    {
+        $individualTest = Individual::all();
+      
+    
+        return view('express-diagnostics', [
+            'individualTest'=>$individualTest,
+        ]);
+
+    }
+
+   
+    
     public function search(Request $request): Response
     {
         if(!empty($request->id))
@@ -88,9 +105,7 @@ class DiagnosticsController extends Controller
         }
 
         return response(''); // Return a response
-
-       
-        
+  
     }
 
      /**
