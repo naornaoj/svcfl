@@ -77,97 +77,62 @@
                 </div>
 
                 <h3 class=" font-bold text-xl mb-3" >Laboratory Requests</h3>
-                <div class="col-md-6 mt-1">
                 <!-- Lab request-Individual -->
-                    
-                        <label class="text-dark">Individual Test</label>
-                        <select id="individualTest1" class="form-select mt-3" aria-label="Default select example">
-                            <option selected>Select a Test</option>
-                            @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
-                        
-                             @endforeach
-                        </select>
-
-                        <select id="individualTest2" class="form-select mt-3" aria-label="Default select example">
-                            <option selected>Select a Test</option>
-                            <option value="1">Microbiology Tests</option>
-                            <option value="2">Biochemistry Tests</option>
-                            <option value="3">Histopatology Tests</option>
-                        </select>
-                        
-                        <select id="individualTest3" class="form-select mt-3" aria-label="Default select example">
-
-                            <<option selected>Select a Test</option>
-                            <option value="1">Microbiology Tests</option>
-                            <option value="2">Biochemistry Tests</option>
-                            <option value="3">Histopatology Tests</option>
-                        </select>
-
-                        <select id="individualTest4" class="form-select mt-3" aria-label="Default select example">
-
-                            <option selected>Select a Test</option>
-                            <option value="1">Microbiology Tests</option>
-                            <option value="2">Biochemistry Tests</option>
-                            <option value="3">Histopatology Tests</option>
-                        </select>
-
-                        <select id="individualTest5" class="form-select mt-3" aria-label="Default select example">
-
-                            <option selected>Select a Test</option>
-                            <option value="1">Microbiology Tests</option>
-                            <option value="2">Biochemistry Tests</option>
-                            <option value="3">Histopatology Tests</option>
-                        </select>
-                        
-                        <select id="individualTest6" class="form-select mt-3" aria-label="Default select example">
-                            <option selected>Select a Test</option>
-                            <option value="1">Microbiology Tests</option>
-                            <option value="2">Biochemistry Tests</option>
-                            <option value="3">Histopatology Tests</option>
-                        </select> 
-                </div>
-
                 <div class="col-md-6 mt-1">
-                   
-                    <label class="text-dark">Package Test</label>
-                    
-
-                    <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
-                    <option>Select a Package</option>
-                        
-                         @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                        
+                    <label class="text-dark">Individual Test</label>
+                    <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
+                        <option selected>Select a Test</option>
+                        @foreach($individualTest as $individual)
+                        <option value="{{ $individual->id }}" >{{ $individual->individualTest }}</option>
                         @endforeach
-                        
-                
-                    </select>
-                    
-                    <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
-                    <option>Select a Package</option>
-                            @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                            @endforeach 
-                    </select>
-                    
-                    <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package2">
-                    <option>Select a Package</option>
-                            @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                            @endforeach 
                     </select>
 
-                    <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package2">
-                    <option>Select a Package</option>
-                            @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                            @endforeach 
+                    <select id="individualTest2" class="form-select mt-3" aria-label="Default select example" name="individualTest2">
+                        <option selected>Select a Test</option>
+                        @foreach($individualTest as $individual)
+                        <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>      
+                            @endforeach
                     </select>
+                    
+                    <select id="individualTest3" class="form-select mt-3" aria-label="Default select example" name="individualTest3">
+                        <option selected>Select a Test</option>
+                        @foreach($individualTest as $individual)
+                        <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>                     
+                        @endforeach
+                    </select>
+
+                    <select id="individualTest4" class="form-select mt-3" aria-label="Default select example" name="individualTest4">
+                        <option selected>Select a Test</option>
+                        @foreach($individualTest as $individual)
+                        <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                        @endforeach
+                    </select>
+
+                    <select id="individualTest5" class="form-select mt-3" aria-label="Default select example" name="individualTest5">
+                        <option selected>Select a Test</option>
+                        @foreach($individualTest as $individual)
+                        <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                        @endforeach
+                    </select>
+                    
+                    <select id="individualTest6" class="form-select mt-3" aria-label="Default select example" name="individualTest6">
+                        <option selected>Select a Test</option>
+                        @foreach($individualTest as $individual)
+                        <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                        @endforeach
+                    </select> 
+
+                    <select id="individualTest7" class="form-select mt-3" aria-label="Default select example" name="individualTest7">
+                        <option selected>Select a Test</option>
+                        @foreach($individualTest as $individual)
+                        <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                        @endforeach
+                    </select> 
                 </div>
-             
+               
                 <input type="submit" class="btn btn-primary btn-lg" name="submit" value="Submit">
             </form>
+            
             <!-- Back to Top -->
             <a href="#" class="btn btn-lg btn-info btn-lg-square rounded-circle back-to-top float-end"><i class="bi bi-arrow-up float-right"></i></a>
         </div>

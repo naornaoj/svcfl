@@ -24,6 +24,13 @@ return new class extends Migration
             $table->string('package2');
             $table->string('package3');
             $table->string('package4');
+            $table->string('individualTest1');
+            $table->string('individualTest2');
+            $table->string('individualTest3');
+            $table->string('individualTest4');
+            $table->string('individualTest5');
+            $table->string('individualTest6');
+            $table->string('individualTest7');
             $table->timestamps();
         });
     }
