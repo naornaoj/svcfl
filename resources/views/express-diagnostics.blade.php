@@ -83,9 +83,10 @@
                         <label class="text-dark">Individual Test</label>
                         <select id="individualTest1" class="form-select mt-3" aria-label="Default select example">
                             <option selected>Pathology Testing</option>
-                            @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
-                            @endforeach 
+                            @foreach($indivualTest as $individual)
+                            <option value="{{ $individual->id }}">{{ $individual->indivualTest }}</option>
+                        
+                             @endforeach
                         </select>
 
                         <select id="individualTest2" class="form-select mt-3" aria-label="Default select example">

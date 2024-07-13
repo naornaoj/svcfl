@@ -6,7 +6,7 @@ use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\IndivualTestController;
 use App\Models\Diagnostics;
 use App\Models\Packages;
-use App\Models\Individual;
+use App\Models\IndividualTest;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,6 +20,26 @@ use Illuminate\Http\Response;
 
 class DiagnosticsController extends Controller
 {
+    public function packagesList()
+    {
+        $packages = Packages::all();
+        // $selectedPackage = Packages::findOrFail();
+    
+        return view('express-diagnostics', [
+            'packages'=>$packages
+        ]);
+
+    }
+
+    public function individualTestList()
+    {
+        $individualtest = IndividualTest::all();
+      
+        return view('express-diagnostics', [
+            'individualtest'=>$individualtest,
+        ]);
+
+    }
     /**
      * Store the express-diagnostics's input form.
      */
@@ -28,9 +48,6 @@ class DiagnosticsController extends Controller
         
             $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
             return response($diagnostics);
-            
-            // $packages= DB::select('select * from packages where id = ? limit 1', [$id]);
-            // return response($packages);
 
     }
 
@@ -54,9 +71,15 @@ class DiagnosticsController extends Controller
             'package2' =>$request->package2,
             'package3' =>$request->package3,
             'package4' =>$request->package4,
+            'individualTest1' =>$request->individualTest1,
+            'individualTest2' =>$request->individualTest2,
+            'individualTest3' =>$request->individualTest3,
+            'individualTest4' =>$request->individualTest4,
+            'individualTest5' =>$request->individualTest5,
+            'individualTest6' =>$request->individualTest6,
+            'individualTest7' =>$request->individualTest7,
+          
         ]);
-
-        $package1 = Packages::all('packageName', 'id');
 
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
@@ -64,30 +87,8 @@ class DiagnosticsController extends Controller
     /**
      * Display the packages list.
      */
-    public function packagesList()
-    {
-        $packages = Packages::all();
-        // $selectedPackage = Packages::findOrFail();
-    
-        return view('express-diagnostics', [
-            'packages'=>$packages
-        ]);
-
-    }
-
-    public function individualTestList()
-    {
-        $individualTest = Individual::all();
-      
-    
-        return view('express-diagnostics', [
-            'individualTest'=>$individualTest,
-        ]);
-
-    }
-
    
-    
+
     public function search(Request $request): Response
     {
         if(!empty($request->id))
@@ -111,17 +112,16 @@ class DiagnosticsController extends Controller
      /**
      * Display the specified resource.
      */
-    // public function show(string $id)
-    // {
-    //     // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
-    //     // return response($packages);
+    public function show(string $id)
+    {
+        // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
+        // return response($packages);
 
-    //     $packages = Packages::where('status', 1)->get();
-    //             foreach ($packages as $data){
-    //                 $data->status = 0;
-    //                 $data->update();
-    //             }
-    // }
-
+        // $packages = Packages::where('status', 1)->get();
+        //         foreach ($packages as $data){
+        //             $data->status = 0;
+        //             $data->update();
+        //         }
+    }
 
 }

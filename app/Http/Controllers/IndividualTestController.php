@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Http\Controllers\Users;
-use App\Models\Individual;
+use App\Models\IndividualTest;
 use App\Models\Packages;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -18,7 +18,7 @@ use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Response;
 
 
-class IndividualController extends Controller
+class IndividualTestController extends Controller
 {
 
     /**
@@ -27,8 +27,8 @@ class IndividualController extends Controller
     public function create(string $id)
     {
         
-            $individual= DB::insert('insert into * individualTest where id = ? limit 1', [$id]);
-            return response($individual);
+            $individualTest= DB::insert('insert into * individualtest where id = ? limit 1', [$id]);
+            return response($individualTest);
         
     }
 
@@ -50,7 +50,7 @@ class IndividualController extends Controller
     //         'reqphysician' => ['required', 'string', 'max:255'],
     //     ]); 
 
-        $individualTest = Individual::create([
+        $individualTest = IndividualTest::create([
             'individualTest' => $request->individualTest,
         ]);
         
