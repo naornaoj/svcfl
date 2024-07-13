@@ -22,8 +22,9 @@ class DiagnosticsController extends Controller
 {
     public function packagesList()
     {
-        $packages = Packages::all();
-        // $selectedPackage = Packages::findOrFail();
+    
+        $packages = DB::table('packages')->select('id', 'packageName')->get();
+        
     
         return view('express-diagnostics', [
             'packages'=>$packages
@@ -33,10 +34,10 @@ class DiagnosticsController extends Controller
 
     public function individualTestList()
     {
-        $individualtest = IndividualTest::all();
-      
+        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+
         return view('express-diagnostics', [
-            'individualtest'=>$individualtest,
+            'individualTest'=>$individualTest
         ]);
 
     }
@@ -87,8 +88,6 @@ class DiagnosticsController extends Controller
     /**
      * Display the packages list.
      */
-   
-
     public function search(Request $request): Response
     {
         if(!empty($request->id))

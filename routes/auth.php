@@ -38,10 +38,10 @@ Route::middleware('guest')->group(function () {
     // Route::get('packages', [DiagnosticsController::class, 'create'])
     //            ->name('packages');
 
-    Route::get('express-diagnostics', [DiagnosticsController::class, 'packagesList'])
+    Route::get('/express-diagnostics', [DiagnosticsController::class, 'packagesList'])
                 ->name('packages');
     
-    Route::get('express-diagnostics', [DiagnosticsController::class, 'individualTestList'])
+    Route::get('/express-diagnostics', [DiagnosticsController::class, 'individualTestList'])
                 ->name('individualTest');
 
     // Route::post('packages', [PackagesController::class, 'store'])
