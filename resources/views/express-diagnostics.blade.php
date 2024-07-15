@@ -35,6 +35,11 @@
             <form class="row g-3" method="POST" action="{{ route('express-diagnostics') }}">
                 @csrf
                 <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
+                <div class="col-md-2">
+                    <label for="name" class="form-label">REQUEST ID</label>
+                    <input type="number" class="form-control" id="id" name="id" required>
+                </div>
+               
                 @if(session()->has('success'))
                     <div class="alert alert-success">
                         {{ session()->get('success') }}
@@ -82,7 +87,7 @@
                     <label class="text-dark">Individual Test</label>
                     <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
                         <option selected>Select a Test</option>
-                        @foreach($individualTest as $individual)
+                        @foreach($individualTest as $individual)l
                         <option value="{{ $individual->id }}" >{{ $individual->individualTest }}</option>
                         @endforeach
                     </select>

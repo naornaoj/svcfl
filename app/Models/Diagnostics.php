@@ -23,7 +23,18 @@ class Diagnostics extends Authenticatable
         'contact',
         'address',
         'email',
-        'reqphysician'
+        'reqphysician',
+        'package1',
+        'package2',
+        'package3',
+        'package4',
+        'individualTest1', 
+        'individualTest2', 
+        'individualTest3',
+        'individualTest4', 
+        'individualTest5', 
+        'individualTest6', 
+        'individualTest7' 
     ];
 
     /**

@@ -38,7 +38,8 @@ class DiagnosticsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $selectedIndividualId = $request->input('selectedIndividualId');
+         $selectedIndividualId = $request->input('selectedIndividualId');
+        // $selectedIndividualId = IndividualTest::first()->IndividualId;
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -62,8 +63,6 @@ class DiagnosticsController extends Controller
             
           
         ]);
-
-        
 
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
