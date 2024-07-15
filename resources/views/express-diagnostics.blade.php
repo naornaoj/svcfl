@@ -35,11 +35,6 @@
             <form class="row g-3" method="POST" action="{{ route('express-diagnostics') }}">
                 @csrf
                 <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
-                <div class="col-md-2">
-                    <label for="name" class="form-label">REQUEST ID</label>
-                    <input type="number" class="form-control" id="id" name="id" required>
-                </div>
-               
                 @if(session()->has('success'))
                     <div class="alert alert-success">
                         {{ session()->get('success') }}
