@@ -105,7 +105,7 @@
                     $('#age').val(response[0].age);
                     $('#gender').val(response[0].gender);
                     $('#address').val(response[0].address);
-                    $('#reqphysician').val(response[0].physician);
+                    $('#reqphysician').val(response[0].reqphysician);
                     $('#dt_requested').val(response[0].updated_at);
 
                     console.log(response);
