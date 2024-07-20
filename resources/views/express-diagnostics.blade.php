@@ -100,6 +100,12 @@
                             @endforeach
                         </select> 
 
+                <div class="col-md-6 mt-1">
+                   
+                <label class="text-dark">Package Test</label>
+                
+
+
                         <select id="individualTest7" class="form-select mt-3" aria-label="Default select example" name="individualTest7">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
@@ -109,45 +115,13 @@
                     </div>
                     <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
                 </div>
-                <!-- TAB 2 - Package test -->
-                <div class="tab-pane" id="fill-tabpanel-1" role="tabpanel" aria-labelledby="fill-tab-1">
-                    <div class="col-md-6 mt-1">
-                    <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
-                    <option>Select a Package</option>
-                        
-                        @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                        
-                        @endforeach
-                    </select>
-                    
-                    <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
-                    <option>Select a Package</option>
-                            @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                            @endforeach 
-                    </select>
-                    
-                    <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package2">
-                    <option>Select a Package</option>
-                            @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                            @endforeach 
-                    </select>
-    
-                    <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package2">
-                    <option>Select a Package</option>
-                            @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                            @endforeach 
-                        </select>
-                </div>
+               
                 <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
             </div>
         </div>
 
             
-            
+    
             
             
         </form>
