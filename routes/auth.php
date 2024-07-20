@@ -3,12 +3,12 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\DiagnosticsController;
+use App\Http\Controllers\IndividualTestControllerController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\DiagnosticsController;
 use App\Http\Controllers\PackagesController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -39,7 +39,11 @@ Route::middleware('guest')->group(function () {
     // Route::get('packages', [DiagnosticsController::class, 'create'])
     //            ->name('packages');
 
-    Route::get('/packages/{id}', [DiagnosticsController::class, 'create'])->name('packages');
+    Route::get('/express-diagnostics', [DiagnosticsController::class, 'packagesList'])
+                ->name('packages');
+    
+    Route::get('/express-diagnostics', [DiagnosticsController::class, 'individualTestList'])
+                ->name('individualTest');
 
     // Route::post('packages', [PackagesController::class, 'store'])
     //            ->name('packages');

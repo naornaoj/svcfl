@@ -55,8 +55,8 @@
             </div>
             <div class="grid md:grid-cols-12 md:gap-4 ">
                 <div class="relative z-0 mb-5 group col-span-3">
-                    <label for="doctor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">REQUESTING DOCTOR</label>
-                    <input type="text" id="doctor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
+                    <label for="reqphysician" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">REQUESTING DOCTOR</label>
+                    <input type="text" id="reqphysician" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
                 </div>
                 <div class="relative z-0 mb-5 group col-span-3">
                     <label for="dt_requested" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DATE & TIME REQUESTED</label>
@@ -105,7 +105,7 @@
                     $('#age').val(response[0].age);
                     $('#gender').val(response[0].gender);
                     $('#address').val(response[0].address);
-                    $('#doctor').val(response[0].physician);
+                    $('#reqphysician').val(response[0].reqphysician);
                     $('#dt_requested').val(response[0].updated_at);
 
                     console.log(response);

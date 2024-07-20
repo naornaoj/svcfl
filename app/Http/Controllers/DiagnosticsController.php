@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
-use pp\Http\Controllers\PackagesController;
+use App\Http\Controllers\PackagesController;
+use App\Http\Controllers\IndivualTestController;
 use App\Models\Diagnostics;
 use App\Models\Packages;
+use App\Models\IndividualTest;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -18,22 +20,14 @@ use Illuminate\Http\Response;
 
 class DiagnosticsController extends Controller
 {
-    public function packagesList()
-    {
-    	$packages = Packages::all();
-    	return view('packages',compact('packages'));
-    }
     /**
-     * Display the user's profile form.
+     * Store the express-diagnostics's input form.
      */
     public function create(string $id)
     {
         
-            // $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
-            // return response($diagnostics);
-            
-            $packages= DB::select('select * from packages where id = ? limit 1', [$id]);
-            return response($packages);
+            $diagnostics = DB::insert('insert into * diagnostics where id = ? limit 1', [$id]);
+            return response($diagnostics);
 
     }
 
@@ -44,6 +38,8 @@ class DiagnosticsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+         $selectedIndividualId = $request->input('selectedIndividualId');
+        // $selectedIndividualId = IndividualTest::first()->IndividualId;
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -52,13 +48,50 @@ class DiagnosticsController extends Controller
             'contact' => $request->contact,
             'address' => $request->address,
             'email' => $request->email,
-
-            'physician' => $request->physician
+            'reqphysician' =>$request->reqphysician,
+            'package1' =>$request->package1,
+            'package2' =>$request->package2,
+            'package3' =>$request->package3,
+            'package4' =>$request->package4,
+            'individualTest1' =>$request->individualTest1,
+            'individualTest2' =>$request->individualTest2,
+            'individualTest3' =>$request->individualTest3,
+            'individualTest4' =>$request->individualTest4,
+            'individualTest5' =>$request->individualTest5,
+            'individualTest6' =>$request->individualTest6,
+            'individualTest7' =>$request->individualTest7,
+            
+          
         ]);
 
-        return redirect(route('express-diagnostics', absolute: false));
+        return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
 
+    public function packagesList()
+    {
+    
+        $packages = DB::table('packages')->select('id', 'packageName')->get();
+        
+    
+        return view('express-diagnostics', [
+            'packages'=>$packages
+        ]);
+
+    }
+
+    public function individualTestList()
+    {
+        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+
+        return view('express-diagnostics', [
+            'individualTest'=>$individualTest
+        ]);
+
+    }
+
+    /**
+     * Display the packages list.
+     */
     public function search(Request $request): Response
     {
         if(!empty($request->id))
@@ -76,33 +109,22 @@ class DiagnosticsController extends Controller
         }
 
         return response(''); // Return a response
-    }
-
-            'reqphysician' =>$request->reqphysician,
-            'package1' =>$request->package1,
-            'package2' =>$request->package2,
-            'package3' =>$request->package3,
-            'package4' =>$request->package4,
-        ]);
-
-        
-        return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
+  
     }
 
      /**
      * Display the specified resource.
      */
-    // public function show(string $id)
-    // {
-    //     // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
-    //     // return response($packages);
+    public function show(string $id)
+    {
+        // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
+        // return response($packages);
 
-    //     $packages = Packages::where('status', 1)->get();
-    //             foreach ($packages as $data){
-    //                 $data->status = 0;
-    //                 $data->update();
-    //             }
-    // }
-
+        // $packages = Packages::where('status', 1)->get();
+        //         foreach ($packages as $data){
+        //             $data->status = 0;
+        //             $data->update();
+        //         }
+    }
 
 }
