@@ -98,7 +98,7 @@
                 </select> 
             </div>
 
-            <div class="col-md-6 mt-1">
+            <!-- <div class="col-md-6 mt-1">
                    
                 <label class="text-dark">Package Test</label>
                 
@@ -132,7 +132,7 @@
                         <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                         @endforeach 
                    </select>
-            </div>
+            </div> -->
             
             
             <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
