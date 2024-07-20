@@ -71,10 +71,10 @@ class DiagnosticsController extends Controller
     {
     
         $packages = DB::table('packages')->select('id', 'packageName')->get();
-        
-    
+        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+
         return view('express-diagnostics', [
-            'packages'=>$packages
+            'packages'=>$packages, 'individualTest'=>$individualTest
         ]);
 
     }

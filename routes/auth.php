@@ -42,8 +42,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/express-diagnostics', [DiagnosticsController::class, 'packagesList'])
                 ->name('packages');
     
-    Route::get('/express-diagnostics', [DiagnosticsController::class, 'individualTestList'])
-                ->name('individualTest');
+    // Route::get('/express-diagnostics', [DiagnosticsController::class, 'individualTestList'])
+    //             ->name('individualTest');
 
     // Route::post('packages', [PackagesController::class, 'store'])
     //            ->name('packages');
