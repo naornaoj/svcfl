@@ -1,11 +1,34 @@
 <x-app-layout>
-    <div class="bg-white dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
-        <form class="mx-2 my-2">
-        <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">PATIENT DETAILS</h4>
+    <div class="bg-white mb-2 dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="mx-2 my-2">
+            <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">Search Patient</h4>
+            <div class="grid md:grid-cols-12 md:gap-4 ">
+                <div class="relative z-0 mb-5 group col-span-3">
+                    <label for="search_req_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">REQUEST NO</label>
+                    <input type="text" id="search_req_no" name="search_req_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                </div>
+                <div class="relative z-0 mb-5 group col-span-4">
+                    <label for="search_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">PATIENT NAME</label>
+                    <input type="text" id="search_name" name="search_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                </div>
+                <div class="relative z-0 mb-5 group col-span-3">
+                <button type="button" onclick="getInfo()" class="mt-7 p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-2 bg-white dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="mx-2 my-2">
+            <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">PATIENT DETAILS</h4>
             <div class="grid md:grid-cols-12 md:gap-4 ">
                 <div class="relative z-0 mb-5 group col-span-3">
                     <label for="req_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">REQUEST NO</label>
-                    <input type="text" id="req_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="text" id="req_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
                 </div>
                 <div class="relative z-0 mb-5 group col-span-6">
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">PATIENT NAME</label>
@@ -32,106 +55,92 @@
             </div>
             <div class="grid md:grid-cols-12 md:gap-4 ">
                 <div class="relative z-0 mb-5 group col-span-3">
-                    <label for="doctor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">REQUESTING DOCTOR</label>
-                    <input type="text" id="doctor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
+                    <label for="reqphysician" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">REQUESTING DOCTOR</label>
+                    <input type="text" id="reqphysician" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
                 </div>
                 <div class="relative z-0 mb-5 group col-span-3">
                     <label for="dt_requested" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DATE & TIME REQUESTED</label>
-                    <input type="datetime-local" id="dt_requested" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                </div>
-                <div class="relative z-0 mb-5 group col-span-3">
-                    <label for="dt_performed" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DATE & TIME PERFORMED</label>
-                    <input type="datetime-local" id="dt_performed" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                </div>
-                <div class="relative z-0 mb-5 group col-span-3">
-                    <label for="dt_validated" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DATE & TIME VALIDATED</label>
-                    <input type="datetime-local" id="dt_validated" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    <input type="text" id="dt_requested" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="bg-white dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
+        <form class="mx-2 my-2">
             <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">COMPLETE CLOOD COUNT</h4>
-            <div class="relative overflow-x-auto">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="border text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                        <th scope="col" class="px-6 py-3 border-x">COMPLETE BLOOD COUNT</th>
-                        <th scope="col" class="px-6 py-3 border-x">RESULT</th>
-                        <th scope="col" class="px-6 py-3 border-x">NORMAL VALUES</th>
-                        <th scope="col" class="px-6 py-3 border-x">UNIT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 text-sm font-bold text-gray-900 whitespace-nowrap dark:text-white" colspan="4">Blood Count</th>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">WHITE BLOOD CELLS</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">4.5-11.0 x 103</td>
-                            <td class="px-6 py-2 border-x">UI</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">RED BLOOD CELLS</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">uL</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">PLATELET</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">uL</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">HEMATOCRIT(HCT)</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">%</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">HEMOGLOBIN</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">G/dL</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" colspan="4">Differential Count</th>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">Neutrophil</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">50 - 65</td>
-                            <td class="px-6 py-2 border-x">%</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">Lymphocyte</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">20 - 40</td>
-                            <td class="px-6 py-2 border-x">%</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">Monocyte</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">02 – 08</td>
-                            <td class="px-6 py-2 border-x">%</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">Eosinophil</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">01 – 03</td>
-                            <td class="px-6 py-2 border-x">%</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <td class="px-6 py-2 border-x">Basophil</td>
-                            <td class="px-6 py-2 border-x"></td>
-                            <td class="px-6 py-2 border-x">0 – 01</td>
-                            <td class="px-6 py-2 border-x">%</td>
-                        </tr>
-                        <tr class="bg-white border dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" colspan="4">BLOOD TYPE WITH RH:</th>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="mb-5">
+                    <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blood Count</h3>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="WHITE BLOOD CELLS" required />
+                </div>
+                <div class="mb-5">
+                    <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Differential Count</h3>
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Neutrophil" required />
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="RED BLOOD CELLS" required />
+                </div>
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Lymphocyte" required />
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="PLATELET" required />
+                </div>
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Monocyte" required />
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="HEMATOCRIT(HCT)" required />
+                </div>
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Eosinophil" required />
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="HEMOGLOBIN" required />
+                </div>
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Basophil" required />
+                </div>
             </div>
         </form>
     </div>
 </x-app-layout>
+
+<script>
+    function getInfo() {
+        var data = {
+            id : $('#search_req_no').val(),
+            name : $('#search_name').val()
+        };
+
+        console.log(data);
+        $.ajax({
+                headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: '/diagnostics/search',
+                type: 'POST',
+                data: data,
+                success: function(response) {
+                    // Handle the response (e.g., update UI)
+                    $('#req_no').val(response[0].id);
+                    $('#name').val(response[0].name);
+                    $('#age').val(response[0].age);
+                    $('#gender').val(response[0].gender);
+                    $('#address').val(response[0].address);
+                    $('#reqphysician').val(response[0].reqphysician);
+                    $('#dt_requested').val(response[0].updated_at);
+
+                    console.log(response);
+                }
+            });
+    }
+</script>
