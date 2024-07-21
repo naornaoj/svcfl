@@ -116,8 +116,7 @@
                         <option>Select a Package</option>
                                 @foreach($packages as $package)
                                 <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                            
-                            @endforeach
+                                @endforeach
                         </select>
                         
                         <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">

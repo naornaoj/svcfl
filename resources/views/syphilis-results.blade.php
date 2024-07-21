@@ -80,12 +80,11 @@
                     <input type="date" class="form-control" id="dateTimeVal">
                 </div>
 
-                <h1 class="text-center font-bold text-xl mt-4" >COVID-19 ANTIGEN RAPID TEST</h1>
+                <h1 class="text-center font-bold text-xl mt-4" >Syphilis (Qualitative) Screening Test</h1>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <label>*NASAL SWAB</label>
                                 <td class="col-3">RESULT</td>
                                 <td class="col-9"></td>
                             </tr>
