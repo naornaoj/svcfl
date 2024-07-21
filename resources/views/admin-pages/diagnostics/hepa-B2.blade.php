@@ -67,7 +67,7 @@
     </div>
     <div class="bg-white dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
         <form class="mx-2 my-2">
-            <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">Hepa B Surface Antigen Antibody (HBsAg)</h4>
+            <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">Hepa B Surface Antigen Antibody (HBsAg) Quantitative</h4>
             <div class="grid md:grid-cols-12 md:gap-4 ">
                 <div class="relative z-0 mb-5 group col-span-3">
                     <label class="text-right block mb-2 text-sm font-medium text-gray-900 dark:text-white">RESULT</label>
