@@ -98,7 +98,7 @@
                 </select> 
             </div>
 
-            <!-- <div class="col-md-6 mt-1">
+            <div class="col-md-6 mt-1">
                    
                 <label class="text-dark">Package Test</label>
                 
@@ -119,20 +119,20 @@
                         @endforeach 
                 </select>
                 
-                <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package2">
+                <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
                 <option>Select a Package</option>
                         @foreach($packages as $package)
                         <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                         @endforeach 
                 </select>
 
-                <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package2">
+                <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
                 <option>Select a Package</option>
                         @foreach($packages as $package)
                         <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                         @endforeach 
                    </select>
-            </div> -->
+            </div>
             
             
             <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
