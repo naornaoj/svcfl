@@ -100,12 +100,6 @@
                             @endforeach
                         </select> 
 
-                <div class="col-md-6 mt-1">
-                   
-                <label class="text-dark">Package Test</label>
-                
-
-
                         <select id="individualTest7" class="form-select mt-3" aria-label="Default select example" name="individualTest7">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
@@ -119,10 +113,6 @@
                 <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
             </div>
         </div>
-
-            
-    
-            
             
         </form>
         
