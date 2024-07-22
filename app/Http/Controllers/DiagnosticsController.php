@@ -20,30 +20,6 @@ use Illuminate\Http\Response;
 
 class DiagnosticsController extends Controller
 {
-    public function packagesList()
-    {
-    
-        $packages = DB::table('packages')->select('id', 'packageName')->get();
-
-        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
-        
-    
-        return view('express-diagnostics', [
-            'packages'=>$packages,
-            'individualTest'=>$individualTest
-        ]);
-
-    }
-
-    public function individualTestList()
-    {
-        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
-
-        return view('express-diagnostics', [
-            'individualTest'=>$individualTest
-        ]);
-
-    }
     /**
      * Store the express-diagnostics's input form.
      */
@@ -62,6 +38,8 @@ class DiagnosticsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+         $selectedIndividualId = $request->input('selectedIndividualId');
+        // $selectedIndividualId = IndividualTest::first()->IndividualId;
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -82,10 +60,33 @@ class DiagnosticsController extends Controller
             'individualTest5' =>$request->individualTest5,
             'individualTest6' =>$request->individualTest6,
             'individualTest7' =>$request->individualTest7,
+            
           
         ]);
 
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
+    }
+
+    public function packagesList()
+    {
+    
+        $packages = DB::table('packages')->select('id', 'packageName')->get();
+        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+
+        return view('express-diagnostics', [
+            'packages'=>$packages, 'individualTest'=>$individualTest
+        ]);
+
+    }
+
+    public function individualTestList()
+    {
+        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+
+        return view('express-diagnostics', [
+            'individualTest'=>$individualTest
+        ]);
+
     }
 
     /**
