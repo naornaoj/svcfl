@@ -69,46 +69,48 @@
         <form class="mx-2 my-2">
             <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">COMPLETE CLOOD COUNT</h4>
             <div class="grid md:grid-cols-2 md:gap-6">
-                <div class="mb-5">
-                    <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blood Count</h3>
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="WHITE BLOOD CELLS" required />
+                <div class="">
+                    <label class="block text-l font-medium text-gray-900 dark:text-white">Blood Count</label>
                 </div>
-                <div class="mb-5">
-                    <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Differential Count</h3>
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Neutrophil" required />
+                <div class="">
+                    <label class="block text-l font-medium text-gray-900 dark:text-white">Differential Count</label>
                 </div>
             </div>
-            <div class="grid md:grid-cols-2 md:gap-6">
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="RED BLOOD CELLS" required />
-                </div>
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Lymphocyte" required />
-                </div>
-            </div>
-            <div class="grid md:grid-cols-2 md:gap-6">
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="PLATELET" required />
-                </div>
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Monocyte" required />
-                </div>
-            </div>
-            <div class="grid md:grid-cols-2 md:gap-6">
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="HEMATOCRIT(HCT)" required />
-                </div>
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Eosinophil" required />
-                </div>
-            </div>
-            <div class="grid md:grid-cols-2 md:gap-6">
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="HEMOGLOBIN" required />
-                </div>
-                <div class="mb-5">
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Basophil" required />
-                </div>
+            <div class="grid md:gap-2 grid-cols-4 grid-rows-6 mb-5">
+                <label for="TSH" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">WHITE BLOOD CELLS</label>
+                <input type="text" id="TSH" name="TSH" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="UI" required />
+                
+                <label for="FT4" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">Neutrophil</label>
+                <input type="text" id="FT4" name="FT4" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="%" required />
+                
+                <label for="FT3" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">RED BLOOD CELLS</label>
+                <input type="text" id="FT3" name="FT3" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="uL" required />
+                
+                <label for="T3" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">Lymphocyte</label>
+                <input type="text" id="T3" name="T3" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="%" required />
+                
+                <label for="T4" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">PLATELET</label>
+                <input type="text" id="T4" name="T4" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="uL" required />
+                
+                <label for="TSH" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">Monocyte</label>
+                <input type="text" id="TSH" name="TSH" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="%" required />
+                
+                <label for="FT4" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">HEMATOCRIT(HCT)</label>
+                <input type="text" id="FT4" name="FT4" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="%" required />
+                
+                <label for="FT3" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">Eosinophil</label>
+                <input type="text" id="FT3" name="FT3" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="%" required />
+                
+                <label for="T3" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">HEMOGLOBIN</label>
+                <input type="text" id="T3" name="T3" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="G/dL" required />
+                
+                <label for="T4" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">Basophil</label>
+                <input type="text" id="T4" name="T4" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="%" required />
+
+                <label for="T4" class="text-gray-900 text-L rounded-lg focus:ring-blue-500 w-full p-2.5 dark:placeholder-gray-400 dark:text-white">BLOOD TYPE WITH RH:</label>
+                <input type="text" id="T4" name="T4" class="text-right bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+
+                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">SAVE</button>
             </div>
         </form>
     </div>
