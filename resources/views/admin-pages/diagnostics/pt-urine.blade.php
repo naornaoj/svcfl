@@ -22,8 +22,8 @@
             </div>
         </div>
     </div>
-    <div class="mb-2 bg-white dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
-        <div class="mx-2 my-2">
+    <div class="bg-white dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
+        <form class="mx-2 my-2">
             <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">PATIENT DETAILS</h4>
             <div class="grid md:grid-cols-12 md:gap-4 ">
                 <div class="relative z-0 mb-5 group col-span-3">
@@ -83,7 +83,6 @@
         </form>
     </div>
 </x-app-layout>
-
 <script>
     function getInfo() {
         var data = {

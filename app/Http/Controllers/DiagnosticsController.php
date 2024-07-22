@@ -39,6 +39,8 @@ class DiagnosticsController extends Controller
     public function store(Request $request): RedirectResponse
     {
          $selectedIndividualId = $request->input('selectedIndividualId');
+         $selectedPackageId = $request->input('selectedPackageId');
+
         // $selectedIndividualId = IndividualTest::first()->IndividualId;
 
         $diagnostics = Diagnostics::create([
@@ -72,6 +74,7 @@ class DiagnosticsController extends Controller
     
         $packages = DB::table('packages')->select('id', 'packageName')->get();
         $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+        
 
         return view('express-diagnostics', [
             'packages'=>$packages, 'individualTest'=>$individualTest
