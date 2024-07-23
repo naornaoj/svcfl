@@ -61,53 +61,49 @@
                         <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}" >{{ $individual->individualTest }}</option>
+                            <option value="{{ $individual->individualTest }}" >{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
 
                         <select id="individualTest2" class="form-select mt-3" aria-label="Default select example" name="individualTest2">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>      
+                            <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>      
                                 @endforeach
                         </select>
                         
                         <select id="individualTest3" class="form-select mt-3" aria-label="Default select example" name="individualTest3">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>                     
+                            <option value="{{ $individual->individualTest}}">{{ $individual->individualTest }}</option>                     
                             @endforeach
                         </select>
-
-                      
-                   
-                       
 
                         <select id="individualTest4" class="form-select mt-3" aria-label="Default select example" name="individualTest4">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                            <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
 
                         <select id="individualTest5" class="form-select mt-3" aria-label="Default select example" name="individualTest5">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                            <option value="{{ $individual->individualTest}}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
                         
                         <select id="individualTest6" class="form-select mt-3" aria-label="Default select example" name="individualTest6">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                            <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select> 
 
                         <select id="individualTest7" class="form-select mt-3" aria-label="Default select example" name="individualTest7">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->id }}">{{ $individual->individualTest }}</option>
+                            <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select> 
                     </div>
@@ -119,9 +115,7 @@
                         <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
                         <option>Select a Package</option>
                                 @foreach($packages as $package)
-                                <option value="{{ $package->id }}"@if ($package->id == "package1")
-                                        {{'selected="selected"'}}
-                                        @endif >{{ $package->packageName }}</option>
+                                <option value="{{ $package->packageName }}"@if ($package->packageName == "package1"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
                                 @endforeach 
                         </select>
 
@@ -130,21 +124,21 @@
                         <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
                         <option>Select a Package</option>
                                 @foreach($packages as $package)
-                                <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                                <option value="{{ $package->packageName }}">{{ $package->packageName }}</option>
                                 @endforeach 
                         </select>
                         
                         <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
                         <option>Select a Package</option>
                                 @foreach($packages as $package)
-                                <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                                <option value="{{ $package->packageName }}">{{ $package->packageName }}</option>
                                 @endforeach 
                         </select>
 
                         <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
                         <option>Select a Package</option>
                                 @foreach($packages as $package)
-                                <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                                <option value="{{ $package->packageName }}">{{ $package->packageName }}</option>
                                 @endforeach 
                         </select>
                     </div>
