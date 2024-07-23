@@ -60,7 +60,7 @@
                     <div class="col-md-6 mt-1">
                         <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
                             <option selected>Select a Test</option>
-                            @foreach($individualTest as $individual)l
+                            @foreach($individualTest as $individual)
                             <option value="{{ $individual->id }}" >{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
