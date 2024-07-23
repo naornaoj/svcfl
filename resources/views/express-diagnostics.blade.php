@@ -79,6 +79,10 @@
                             @endforeach
                         </select>
 
+                      
+                   
+                       
+
                         <select id="individualTest4" class="form-select mt-3" aria-label="Default select example" name="individualTest4">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
@@ -115,9 +119,13 @@
                         <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
                         <option>Select a Package</option>
                                 @foreach($packages as $package)
-                                <option value="{{ $package->id }}">{{ $package->packageName }}</option>
-                                @endforeach
+                                <option value="{{ $package->id }}"@if ($package->id == "package1")
+                                        {{'selected="selected"'}}
+                                        @endif >{{ $package->packageName }}</option>
+                                @endforeach 
                         </select>
+
+                        
                         
                         <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
                         <option>Select a Package</option>
