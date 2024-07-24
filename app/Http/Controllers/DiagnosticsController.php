@@ -40,6 +40,8 @@ class DiagnosticsController extends Controller
     {
         $selectedIndividualId = $request->input('selectedIndividualId');
         $selectedPackageId = $request->input('selectedPackageId');
+
+        
        
 
         // $selectedIndividualId = IndividualTest::first()->IndividualId;
