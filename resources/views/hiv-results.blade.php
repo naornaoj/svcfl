@@ -80,8 +80,7 @@
                     <input type="date" class="form-control" id="dateTimeVal">
                 </div>
 
-                <h1 class="text-center font-bold text-xl mt-4" >HIV TEST</h1>
-                <h5 class="text-center font-bold text-xl " >Qualitative</h5>
+                <h1 class="text-center font-bold text-xl mt-4" >HIV TEST - Qualitative</h1>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
