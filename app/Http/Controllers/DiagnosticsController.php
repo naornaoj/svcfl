@@ -21,7 +21,7 @@ use Illuminate\Http\Response;
 class DiagnosticsController extends Controller
 {
     /**
-     * Store the express-diagnostics's input form.
+     * Store the express-diagnostics's inputted data.
      */
     public function create(string $id)
     {
@@ -86,15 +86,15 @@ class DiagnosticsController extends Controller
 
     }
 
-    public function individualTestList()
-    {
-        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+    // public function individualTestList()
+    // {
+    //     $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
 
-        return view('express-diagnostics', [
-            'individualTest'=>$individualTest
-        ]);
+    //     return view('express-diagnostics', [
+    //         'individualTest'=>$individualTest
+    //     ]);
 
-    }
+    // }
 
     /**
      * Display the packages list.
