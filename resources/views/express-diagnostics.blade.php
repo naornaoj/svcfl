@@ -58,8 +58,9 @@
                 <div class="tab-pane active" id="fill-tabpanel-0" role="tabpanel" aria-labelledby="fill-tab-0">
                     <!-- Lab request-Individual -->
                     <div class="col-md-6 mt-1">
-                        <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
-                            <option selected>Select a Test</option>
+                        <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1" {{ $errors->has('individualTest1') ? 'is-invalid' : '' }}">
+                           
+                            
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
@@ -109,13 +110,13 @@
                     </div>
                 </div>
            
-                <div class="tab-pane active" id="fill-tabpanel-1" role="tabpanel" aria-labelledby="fill-tab-0">
+                <div class="tab-pane active" id="fill-tabpanel-1" role="tabpanel" aria-labelledby="fill-tab-1">
                     <!-- Lab request-Package -->
                     <div class="col-md-6 mt-1">
                         <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
                         <option>Select a Package</option>
                                 @foreach($packages as $package)
-                                <option value="{{ $package->packageName }}" @if ($package->packageName == "package1"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
+                                <option value="{{$package->packageName}}" {{ old('package1') == 'packageName' ? 'selected':'' }}>{{$package->packageName}}</option>
                                 @endforeach 
                         </select>
                         
