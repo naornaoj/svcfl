@@ -65,7 +65,6 @@
                 <a href="tel:(088) 828 5017"><i class="bi bi-telephone-inbound fs-2"></i></a>
                     <div class="ms-3">
                         <h5 class="text-white mb-0">Call Now</h5>
-                        
                         <a href="tel:(088) 828 5017">(088) 828 5017</a>
                     </div>
                 </div>
