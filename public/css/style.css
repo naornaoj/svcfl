@@ -1,5 +1,11 @@
 /********** Template CSS **********/
 
+.img-logo{
+    height:120px;
+    width:120px;
+    object-fit:contain;
+    }
+
 .back-to-top {
     position: fixed;
     display: none;

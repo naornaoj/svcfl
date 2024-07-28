@@ -66,6 +66,10 @@
                             @endforeach
                         </select>
 
+                        @if($errors->has('individualTest1'))
+                        <p style="color: red;"> {{ $errors->first('period_id') }}</p>
+                        @endif
+
                         <select id="individualTest2" class="form-select mt-3" aria-label="Default select example" name="individualTest2">
                             <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)

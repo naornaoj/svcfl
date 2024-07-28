@@ -8,8 +8,11 @@
                           <div class="container">
                               <div class="row justify-content-start">
                                   <div class="col-lg-7 text-start">
-                                      <h1 class="display-1 text-white animated slideInRight mb-3">Award Winning Laboratory Center</h1>
-                                      <p class="mb-5 animated slideInRight text-dark">St. Vincent Ferrer Clinical Laboratory is a secondary clinical laboratory licensed by the DOH which offers Laboratory examinations, Drug testing, X-ray, Ultrasound, ECG, DNA test collection and Medical consultation.</p>
+                                      <h1 class="display-1 text-white animated slideInRight mb-3">Our Core Values</h1>
+                                      <h3><i class="bi bi-1-circle-fill"></i>Accuracy</h3>
+                                      <p class="mb-5 animated slideInRight text-dark">
+                                        We are committed to providing precise and reliable diagnostic results. Every test we conduct adheres to quality standards, ensuring that healthcare professionals and patients can trust our findings.
+                                      </p>
                                       <a href="" class="btn btn-info py-3 px-5 animated slideInRight">Explore More</a>
                                   </div>
                               </div>
@@ -22,9 +25,29 @@
                           <div class="container">
                               <div class="row justify-content-end">
                                   <div class="col-lg-7 text-end">
-                                      <h1 class="display-1 text-white animated slideInLeft mb-3">Expet Doctors & Lab Assistants</h1>
-                                      <p class="mb-5 animated slideInLeft text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu quis, fringilla risus.</p>
+                                      <h1 class="display-1 text-white animated slideInLeft mb-3">Our Core Values</h1>
+                                      <h3><i class="bi bi-2-circle-fill"></i>Accessibility</h3>
+                                      <p class="mb-5 animated slideInLeft text-dark">
+                                        We believe that high-quality healthcare should be accessible to everyone. Our services are designed to be cost-effective, making essential diagnostic tests available to all patients.
+                                      </p>
                                       <a href="" class="btn btn-info py-3 px-5 animated slideInLeft">Explore More</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                      <div class="carousel-caption">
+                          <div class="container">
+                              <div class="row justify-content-start">
+                                  <div class="col-lg-7 text-start">
+                                      <h1 class="display-1 text-white animated slideInRight mb-3">Our Core Values</h1>
+                                      <h3><i class="bi bi-3-circle-fill"></i>Integrity</h3>
+                                      <p class="mb-5 animated slideInLeft text-dark">
+                                        We uphold the highest ethical standards in all our operations. From patient interactions to laboratory procedures, we prioritize honesty, transparency, and professionalism, building trust with those we serve.
+                                      </p>
+                                      <a href="" class="btn btn-info py-3 px-5 animated slideInRight">Explore More</a>
                                   </div>
                               </div>
                           </div>

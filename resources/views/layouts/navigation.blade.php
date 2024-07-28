@@ -29,9 +29,9 @@
                     <span>(088) 828 5017</span>
                 </div>
             </div>
-            <a href="#" class="h1 text-white mb-0">SVF<span class="text-dark">CL</span></a>
+            <a href="#" class="h1 text-white mb-3">SVF<span class="text-dark">CL</span></a>
             <div class="d-flex">
-                <i class="bi bi-envelope fs-2"></i>
+                <a href="mailto:st.vincentferrerclinlab@gmail.com"><i class="bi bi-envelope fs-2"></i></a>
                 <div class="ms-3">
                     <h5 class="text-white mb-0">Mail Now</h5>
                     <span>st.vincentferrerclinlab@gmail.com</span>

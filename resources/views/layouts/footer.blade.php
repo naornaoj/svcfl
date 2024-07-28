@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row g-5 py-5">
             <div class="col-lg-6 pe-lg-5">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="h1 text-primary mb-0">SVF<span class="text-white">CL</span></h1>
+                <a href="#" class="navbar-brand">
+                        <img src="/img/4.png" class="img-logo me-3 img-responsive" alt="SVFCL Logo" />
                 </a>
                 <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</p>
                 <p><i class="fa fa-map-marker-alt me-2"></i>G. La Viña St., Valencia, Philippines</p>
