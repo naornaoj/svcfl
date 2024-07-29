@@ -21,7 +21,7 @@ use Illuminate\Http\Response;
 class DiagnosticsController extends Controller
 {
     /**
-     * Store the express-diagnostics's inputted data.
+     * Handle an incoming diagnostics request.
      */
     public function create(string $id)
     {
@@ -58,8 +58,6 @@ class DiagnosticsController extends Controller
             'individualTest5' =>$request->individualTest5,
             'individualTest6' =>$request->individualTest6,
             'individualTest7' =>$request->individualTest7,
-            
-          
         ]);
 
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');

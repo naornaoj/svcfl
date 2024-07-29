@@ -87,7 +87,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
                 <a href="#" class="navbar-brand d-lg-none">
-                        <img src="/img/4.png" class="h-14 me-3" alt="SVFCL Logo" />
+                        <img src="/img/4.png" class="img-logo me-3 img-responsive" alt="SVFCL Logo" />
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
