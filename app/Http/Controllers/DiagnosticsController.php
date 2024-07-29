@@ -38,13 +38,6 @@ class DiagnosticsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $selectedIndividualId = $request->input('selectedIndividualId');
-        $selectedPackageId = $request->input('selectedPackageId');
-
-        
-       
-
-        // $selectedIndividualId = IndividualTest::first()->IndividualId;
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -124,14 +117,7 @@ class DiagnosticsController extends Controller
      */
     public function show(string $id)
     {
-        // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
-        // return response($packages);
-
-        // $packages = Packages::where('status', 1)->get();
-        //         foreach ($packages as $data){
-        //             $data->status = 0;
-        //             $data->update();
-        //         }
+       //
     }
 
 }

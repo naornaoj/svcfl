@@ -58,17 +58,12 @@
                 <div class="tab-pane active" id="fill-tabpanel-0" role="tabpanel" aria-labelledby="fill-tab-0">
                     <!-- Lab request-Individual -->
                     <div class="col-md-6 mt-1">
-                        <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1" {{ $errors->has('individualTest1') ? 'is-invalid' : '' }}">
-                           
-                            
+                        <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
+                            <option selected>Select a Test</option>
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
-
-                        @if($errors->has('individualTest1'))
-                        <p style="color: red;"> {{ $errors->first('period_id') }}</p>
-                        @endif
 
                         <select id="individualTest2" class="form-select mt-3" aria-label="Default select example" name="individualTest2">
                             <option selected>Select a Test</option>
