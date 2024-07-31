@@ -14,7 +14,7 @@
                             <img class="img-fluid" src="img/about-3.jpg">
                         </div>
                         <div class="col-6">
-                            <div class="bg-success w-100 h-100 mt-n5 ms-n5 d-flex flex-column align-items-center justify-content-center">
+                            <div class="bg-primary w-100 h-100 mt-n5 ms-n5 d-flex flex-column align-items-center justify-content-center">
                                 <div class="icon-box-light">
                                     <i class="bi bi-award text-dark"></i>
                                 </div>
@@ -32,7 +32,7 @@
                     </p>
                     <div class="row g-4 g-sm-5 justify-content-center">
                         <div class="col-sm-6">
-                            <div class="about-fact btn-square flex-column rounded-circle bg-success ms-sm-auto">
+                            <div class="about-fact btn-square flex-column rounded-circle bg-primary ms-sm-auto">
                                 <p class="text-white mb-0">Awards Winning</p>
                                 <h1 class="text-white mb-0" data-toggle="counter-up">9999</h1>
                             </div>
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="about-fact mt-n130 btn-square flex-column rounded-circle bg-info mx-sm-auto">
+                            <div class="about-fact mt-n130 btn-square flex-column rounded-circle bg-success mx-sm-auto">
                                 <p class="text-white mb-0">Happy Clients</p>
                                 <h1 class="text-white mb-0" data-toggle="counter-up">9999</h1>
                             </div>

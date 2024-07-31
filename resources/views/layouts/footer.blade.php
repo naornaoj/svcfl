@@ -52,7 +52,7 @@
 
 
 <!-- Copyright Start -->
-<div class="container-fluid copyright bg-secondary text-white-50 py-4">
+<div class="container-fluid copyright bg-primary text-white-50 py-4">
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-start">

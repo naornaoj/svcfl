@@ -58,7 +58,7 @@
       <!-- Topbar End -->
 
       <!-- Brand Start -->
-      <div class="container-fluid bg-info text-white pb-3 d-none d-lg-flex">
+      <div class="container-fluid bg-primary text-white pb-3 d-none d-lg-flex">
         <div class="container pb-2">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex">
@@ -202,7 +202,7 @@
 
 
       <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-info btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
       <!-- JavaScript Libraries -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

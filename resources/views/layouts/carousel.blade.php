@@ -13,7 +13,7 @@
                                       <p class="mb-5 animated slideInRight text-dark">
                                         We are committed to providing precise and reliable diagnostic results. Every test we conduct adheres to quality standards, ensuring that healthcare professionals and patients can trust our findings.
                                       </p>
-                                      <a href="" class="btn btn-info py-3 px-5 animated slideInRight">Explore More</a>
+                                      <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More</a>
                                   </div>
                               </div>
                           </div>
@@ -30,7 +30,7 @@
                                       <p class="mb-5 animated slideInLeft text-dark">
                                         We believe that high-quality healthcare should be accessible to everyone. Our services are designed to be cost-effective, making essential diagnostic tests available to all patients.
                                       </p>
-                                      <a href="" class="btn btn-info py-3 px-5 animated slideInLeft">Explore More</a>
+                                      <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Explore More</a>
                                   </div>
                               </div>
                           </div>
@@ -47,7 +47,7 @@
                                       <p class="mb-5 animated slideInLeft text-dark">
                                         We uphold the highest ethical standards in all our operations. From patient interactions to laboratory procedures, we prioritize honesty, transparency, and professionalism, building trust with those we serve.
                                       </p>
-                                      <a href="" class="btn btn-info py-3 px-5 animated slideInRight">Explore More</a>
+                                      <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More</a>
                                   </div>
                               </div>
                           </div>

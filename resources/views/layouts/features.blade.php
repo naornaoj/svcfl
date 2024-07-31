@@ -28,10 +28,10 @@
                     <a href="/company-services">
                         <div class="feature-item border h-100 p-5">
                             <div class="icon-box-primary mb-4">
-                                <i class="bi bi-building-fill-gear"></i>
+                                <i class="bi bi-building-fill-gear text-primary"></i>
                             </div>
                             <h5 class="mb-3">Company Services</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
+                            <p class="mb-0 text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
                         </div>
                     </a>
                   </div>
@@ -39,10 +39,10 @@
                     <a href="/home-service">
                         <div class="feature-item border h-100 p-5">
                             <div class="icon-box-primary mb-4">
-                                 <i class="bi bi-house-gear-fill"></i><i class="bi bi-virus2"></i>
+                                 <i class="bi bi-house-gear-fill text-primary"></i><i class="bi bi-virus2"></i>
                             </div>
                             <h5 class="mb-3">Home Service</h5>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
+                            <p class="mb-0 text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
                         </div>
                     </a>
                   </div>

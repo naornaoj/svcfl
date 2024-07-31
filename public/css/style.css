@@ -6,6 +6,11 @@
     object-fit:contain;
 }
 
+a:link {
+    color: white;
+    text-decoration: none;
+    }
+
 
 .back-to-top {
     position: fixed;
