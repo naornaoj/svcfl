@@ -3,7 +3,7 @@
           <div class="container pt-5">
               <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                   <h1 class="display-6 mb-3">Reliable & High-Quality Laboratory Services & Packages</h1>
-                  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue, iaculis id elit eget, ultrices pulvinar tortor.</p>
+                  <p class="mb-5">Here at St. Vincent Ferrer Clinical Laboratory, we take pride in our role as a reliable partner in healthcare. We strive to provide exceptional service and precise diagnostic information for better health and wellness.</p>
               </div>
               <div class="row g-4">
                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">

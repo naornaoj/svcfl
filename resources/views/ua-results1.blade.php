@@ -1,5 +1,5 @@
 
-<x-guest-layout>
+<x-app-layout>
     <ol class="flex items-center w-full mb-4 sm:mb-5">
         <li class="flex w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800">
             <div class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
@@ -247,4 +247,4 @@
 
         <button type="submit" class="text-white item left bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
     </form>
-</x-guest-layout>
+</x-app-layout>
