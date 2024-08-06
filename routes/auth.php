@@ -45,10 +45,10 @@ Route::middleware('guest')->group(function () {
     // Route::post('packages', [PackagesController::class, 'store'])
     //            ->name('packages');
                
-    Route::get('ua-results', [RegisteredUserController::class, 'create'])
+    Route::post('ua-results', [RegisteredUserController::class, 'create'])
                 ->name('ua-results');
 
-    Route::post('ua-results', [RegisteredUserController::class, 'store']);
+    Route::get('ua-results', [RegisteredUserController::class, 'store']);
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');

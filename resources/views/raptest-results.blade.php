@@ -63,11 +63,12 @@
                 <p class="font-bold">Remarks: This is only a preliminary test. The NEGATIVE result does not guarantee that the patient is free of COVID19 	INFECTION. Any positive result must be confirmed with alternative testing method(s) and clinical findings. The RT-PCR is still the GOLD Standard in COVID19 Virus identification.</p>
             </div>
 
+          
             @include('client-pages.licence-footer')
-            
             <div class="col-12">
                 <button type="submit" class="btn btn-success float-end my-4">Print Results</button>
             </div>
+            
         </form>
     </div>
 </x-client-layout>

@@ -60,11 +60,11 @@
                         
                     </table>
                 </div>
-
+                @include('client-pages.licence-footer')
                 <div class="col-12">
                     <button type="submit" class="btn btn-success float-end my-4">Print Results</button>
                 </div>
-                @include('client-pages.licence-footer')
+                
             </form>
         </div>
 </x-client-layout>
