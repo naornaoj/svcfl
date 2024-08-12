@@ -28,7 +28,9 @@
                     <a href="tel:(088) 828 5017">(088) 828 5017</a>
                 </div>
             </div>
-            <a href="#" class="h1 text-white mb-2"><img src="/img/4.png" class="img-logo me-3 img-responsive" alt="SVFCL Logo" /></a>
+            <a href="/" class="h1 text-white mb-2">
+                <img src="/img/4.png" class="img-logo me-3 img-responsive" alt="SVFCL Logo" />
+            </a>
             <div class="d-flex">
                 
                 <a href="mailto:st.vincentferrerclinlab@gmail.com"><i class="bi bi-envelope fs-2"></i></a>
