@@ -46,7 +46,7 @@
 <div class="container-fluid sticky-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
-            <a href="#" class="navbar-brand d-lg-none">
+            <a href="/" class="navbar-brand d-lg-none">
                 <h1 class="text-primary m-0">SVF<span class="text-dark">CL</span></h1>
             </a>
             <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
@@ -54,13 +54,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Home</a>
+                <!-- <div class="navbar-nav">
+                    <a href="/" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#services" class="nav-item nav-link">Services</a>
                     <a href="#home-service" class="nav-item nav-link">Contact</a>
                     
-                </div>    
+                </div>     -->
                          
                 
                 <!-- Navbar End 

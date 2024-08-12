@@ -56,13 +56,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
+                <!-- <div class="navbar-nav">
                     <a href="#" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#services" class="nav-item nav-link">Services</a>
                     <a href="#home-service" class="nav-item nav-link">Contact</a>
                     
-                </div>    
+                </div>     -->
                          
                 
                 <!-- Navbar End 
