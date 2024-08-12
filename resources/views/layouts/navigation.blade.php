@@ -72,7 +72,7 @@
                     <a class="btn btn-sm-square btn-primary ms-2" href=""><i class="fab fa-youtube"></i></a>
                 </div>-->
             </div>   
-            <div class="navbar-nav d-flex float-right">
+            <div class="navbar-nav d-flex float-end">
                 @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/dashboard') }}" class="nav-item nav-link float-end">
