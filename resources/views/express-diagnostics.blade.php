@@ -59,14 +59,14 @@
                     <!-- Lab request-Individual -->
                     <div class="col-md-6 mt-1">
                         <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
-                            <option selected>Select a Test</option>
+                            <!-- <option selected>Select a Test</option> -->
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}" @selected(old('individualTest1') == $individual->id)>{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
 
                         <select id="individualTest2" class="form-select mt-3" aria-label="Default select example" name="individualTest2">
-                            <option selected>Select a Test</option>
+                           <!-- <option selected>Select a Test</option> -->
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>      
                                 @endforeach
