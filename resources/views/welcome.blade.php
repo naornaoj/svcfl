@@ -1,7 +1,47 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-      <meta charset="utf-8">
+        <!-- <script>
+        function setCookie(cname,cvalue,exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+
+        function checkCookie() {
+
+            alert("By using our website you agree to our Cookie Policy.")
+            
+
+        // let user = getCookie("username");
+        // if (user != "") {
+        //     alert("Welcome again " + user);
+        // } else {
+        //     user = prompt("Please enter your name:","");
+        //     if (user != "" && user != null) {
+        //     setCookie("username", user, 30);
+        //     }
+        // }
+        }
+        </script>
+      <meta charset="utf-8"> -->
       <title>SVCFL</title>
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
       <meta content="" name="keywords">
@@ -29,8 +69,10 @@
 
       <!-- Template Stylesheet -->
       <link href="{{ asset('css/style.css')}}" rel="stylesheet">
+
+      
     </head>
-    <body>
+    <body >
       <!-- Spinner Start -->
       <div id="spinner"
           class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -157,11 +199,63 @@
       <!-- Carousel Start -->
       @include('layouts.carousel')
       <!-- Carousel End -->
-       
-      <!-- Features Start -->
-      @include('layouts.features')
-      <!-- Features End -->
 
+       <!-- Features Start -->
+ <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-0 feature-row d-flex">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <div id="reader" width="600px"></div>
+                <a href="{{ url('express-diagnostics') }}">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="icon-box-primary mb-4 ">
+                            <i class="bi bi-heart-pulse "></i> 
+                        </div>
+                        <h5 class="mb-3 mt-3">Express Diagnostics</h5> 
+                        <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p> -->
+                    </div>
+                </a>
+                </div>
+               
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <a href="lab-results">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="icon-box-primary mb-4">
+                            <i class="bi bi-clipboard-pulse"></i>
+                        </div>
+                        <h5 class="mb-3">Express Lab Results</h5>
+                        <!-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p> -->
+                    </div>
+                </a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <a href="/company-services">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="icon-box-primary mb-4">
+                            <i class="bi bi-building-fill-gear text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Company Services</h5>
+                        <!-- <p class="mb-0 text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p> -->
+                    </div>
+                </a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <a href="/home-service">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="icon-box-primary mb-4">
+                                <i class="bi bi-house-gear-fill text-primary"></i><i class="bi bi-virus2"></i>
+                        </div>
+                        <h5 class="mb-3">Home Service</h5>
+                        <!-- <p class="mb-0 text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p> -->
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- Features End -->
+       
+    
 
       <!-- About Start -->
       @include('layouts.about')
@@ -199,8 +293,7 @@
       <!-- Footer and copyright section start -->
       @include('layouts.footer')
       <!-- Footer and copyright section start -->
-
-
+       
       <!-- Back to Top -->
       <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -212,9 +305,31 @@
       <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
       <script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
       <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+      <!-- include the library -->
+      <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 
       <!-- Template Javascript -->
       <script src="{{ asset('js/main.js') }}"></script>
       <script src="{{ asset('js/dark-mode.js')}}"></script>
     </body>
+    <script>
+       function onScanSuccess(decodedText, decodedResult) {
+        // handle the scanned code as you like, for example:
+        console.log(`Code matched = ${decodedText}`, decodedResult);
+        }
+
+        function onScanFailure(error) {
+        // handle scan failure, usually better to ignore and keep scanning.
+        // for example:
+        console.warn(`Code scan error = ${error}`);
+        }
+
+        let html5QrcodeScanner = new Html5QrcodeScanner(
+        "reader",
+        { fps: 10, qrbox: {width: 250, height: 250} },
+        /* verbose= */ false);
+        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+
+        
+    </script>
 </html>
