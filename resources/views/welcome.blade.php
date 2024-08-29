@@ -205,7 +205,7 @@
         <div class="container">
             <div class="row g-0 feature-row d-flex">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                <div id="reader" width="600px"></div>
+                <!-- <div id="reader" width="600px"></div> -->
                 <a href="{{ url('express-diagnostics') }}">
                     <div class="feature-item border h-100 p-5">
                         <div class="icon-box-primary mb-4 ">
