@@ -4,7 +4,7 @@
     <div class="flex items-center justify-between">
       <div class="flex items-center justify-start rtl:justify-end">
         <a href="{{ route('dashboard') }}" class="flex ms-2 md:me-1">
-          <img src="/img/logo-4.png" class="h-14 me-3" alt="SVFCL Logo" />
+          <img src="/img/4.png" class="h-14  me-3" alt="SVFCL Logo" />
         </a>
       </div>
       <div class="flex items-center">
