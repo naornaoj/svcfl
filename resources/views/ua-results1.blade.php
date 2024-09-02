@@ -25,7 +25,7 @@
         </li>
     </ol>
     
-    <form method="POST" action="{{ route('ua-results') }}">
+    <form method="POST" action="{{ route('ua-results1') }}">
     @csrf
 
         <h3 class="font-semibold">Profile Details</h3>
