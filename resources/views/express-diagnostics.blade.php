@@ -59,49 +59,49 @@
                     <!-- Lab request-Individual -->
                     <div class="col-md-6 mt-1">
                         <select id="individualTest1" class="form-select mt-3" aria-label="Default select example" name="individualTest1">
-                            <option selected>Select a Test</option>
+                            <option selected></option>
                             @foreach($individualTest as $individual)
-                            <option value="{{ $individual->individualTest }}" @selected(old('individualTest1') == $individual->id)>{{ $individual->individualTest }}</option>
+                            <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
 
                         <select id="individualTest2" class="form-select mt-3" aria-label="Default select example" name="individualTest2">
-                           <option selected>Select a Test</option>
+                           <option selected></option>
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>      
                                 @endforeach
                         </select>
                         
                         <select id="individualTest3" class="form-select mt-3" aria-label="Default select example" name="individualTest3">
-                            <option selected>Select a Test</option>
+                            <option selected></option>
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest}}">{{ $individual->individualTest }}</option>                     
                             @endforeach
                         </select>
 
                         <select id="individualTest4" class="form-select mt-3" aria-label="Default select example" name="individualTest4">
-                            <option selected>Select a Test</option>
+                            <option selected></option>
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
 
                         <select id="individualTest5" class="form-select mt-3" aria-label="Default select example" name="individualTest5">
-                            <option selected>Select a Test</option>
+                            <option selected></option>
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest}}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select>
                         
                         <select id="individualTest6" class="form-select mt-3" aria-label="Default select example" name="individualTest6">
-                            <option selected>Select a Test</option>
+                            <option selected></option>
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
                         </select> 
 
                         <select id="individualTest7" class="form-select mt-3" aria-label="Default select example" name="individualTest7">
-                            <option selected>Select a Test</option>
+                            <option selected></option>
                             @foreach($individualTest as $individual)
                             <option value="{{ $individual->individualTest }}">{{ $individual->individualTest }}</option>
                             @endforeach
@@ -113,28 +113,28 @@
                     <!-- Lab request-Package -->
                     <div class="col-md-6 mt-1">
                         <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
-                        <option>Select a Package</option>
+                        <option></option>
                                 @foreach($packages as $package)
                                 <option value="{{$package->packageName}}" {{ old('package1') == 'packageName' ? 'selected':'' }}>{{$package->packageName}}</option>
                                 @endforeach 
                         </select>
                         
                         <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
-                        <option>Select a Package</option>
+                        <option></option>
                                 @foreach($packages as $package)
                                 <option value="{{ $package->packageName }}" @if ($package->packageName == "package2"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
                                 @endforeach 
                         </select>
                         
                         <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
-                        <option>Select a Package</option>
+                        <option></option>
                                 @foreach($packages as $package)
                                 <option value="{{ $package->packageName }}" @if ($package->packageName == "package3"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
                                 @endforeach 
                         </select>
 
                         <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
-                        <option>Select a Package</option>
+                        <option></option>
                                 @foreach($packages as $package)
                                 <option value="{{ $package->packageName }}" @if ($package->packageName == "package4"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
                                 @endforeach 
