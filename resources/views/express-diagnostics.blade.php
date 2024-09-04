@@ -115,7 +115,7 @@
                         <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
                         <option></option>
                                 @foreach($packages as $package)
-                                <option value="{{$package->packageName}}" {{ old('package1') == 'packageName' ? 'selected':'' }}>{{$package->packageName}}</option>
+                                <option value="{{$package->packageName}}">{{$package->packageName}}</option>
                                 @endforeach 
                         </select>
                         
