@@ -70,6 +70,8 @@
       <!-- Template Stylesheet -->
       <link href="{{ asset('css/style.css')}}" rel="stylesheet">
 
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+
       
     </head>
     <body >
@@ -293,6 +295,20 @@
       <!-- Footer and copyright section start -->
       @include('layouts.footer')
       <!-- Footer and copyright section start -->
+
+
+    <!-- START Bootstrap-Cookie-Alert -->
+    <div class="alert text-center cookiealert" role="alert">
+        &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="#" target="_blank">Privacy Policy</a>
+
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+            I agree
+        </button>
+    </div>
+    <!-- END Bootstrap-Cookie-Alert -->
+
+
+
        
       <!-- Back to Top -->
       <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -307,29 +323,16 @@
       <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
       <!-- include the library -->
       <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+      <!-- include the library - cookie Alert! -->
+      <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 
       <!-- Template Javascript -->
       <script src="{{ asset('js/main.js') }}"></script>
       <script src="{{ asset('js/dark-mode.js')}}"></script>
     </body>
     <script>
-       function onScanSuccess(decodedText, decodedResult) {
-        // handle the scanned code as you like, for example:
-        console.log(`Code matched = ${decodedText}`, decodedResult);
-        }
-
-        function onScanFailure(error) {
-        // handle scan failure, usually better to ignore and keep scanning.
-        // for example:
-        console.warn(`Code scan error = ${error}`);
-        }
-
-        let html5QrcodeScanner = new Html5QrcodeScanner(
-        "reader",
-        { fps: 10, qrbox: {width: 250, height: 250} },
-        /* verbose= */ false);
-        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
-
-        
+       window.addEventListener("cookieAlertAccept", function() {
+            alert("cookies accepted")
+        })
     </script>
 </html>

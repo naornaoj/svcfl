@@ -9,7 +9,7 @@
                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                       <div class="service-item">
                           <div class="icon-box-primary mb-4">
-                              <i class="bi bi-heart-pulse text-dark"></i>
+                            <i class="bi bi-prescription2 text-dark"></i>
                           </div>
                           <h5 class="mb-3">Laboratory Testing</h4>
                               <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
@@ -59,7 +59,7 @@
                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                       <div class="service-item">
                           <div class="icon-box-primary mb-4">
-                              <i class="bi bi-prescription2 text-dark"></i>
+                            <i class="bi bi-heart-pulse text-dark"></i>
                           </div>
                           <h5 class="mb-3">ECG</h4>
                               <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
