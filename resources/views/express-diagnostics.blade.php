@@ -128,14 +128,14 @@
                             @endforeach 
                     </select>
                     
-                    <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package2">
+                    <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
                     <option>Select a Package</option>
                             @foreach($packages as $package)
                             <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                             @endforeach 
                     </select>
     
-                    <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package2">
+                    <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
                     <option>Select a Package</option>
                             @foreach($packages as $package)
                             <option value="{{ $package->id }}">{{ $package->packageName }}</option>

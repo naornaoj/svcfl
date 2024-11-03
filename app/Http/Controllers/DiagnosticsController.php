@@ -40,6 +40,7 @@ class DiagnosticsController extends Controller
     {
          $selectedIndividualId = $request->input('selectedIndividualId');
         // $selectedIndividualId = IndividualTest::first()->IndividualId;
+        $usermail = $request->email;
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -47,7 +48,7 @@ class DiagnosticsController extends Controller
             'gender' => $request->gender,
             'contact' => $request->contact,
             'address' => $request->address,
-            'email' => $request->email,
+            'email' => $usermail,
             'reqphysician' =>$request->reqphysician,
             'package1' =>$request->package1,
             'package2' =>$request->package2,
@@ -60,9 +61,15 @@ class DiagnosticsController extends Controller
             'individualTest5' =>$request->individualTest5,
             'individualTest6' =>$request->individualTest6,
             'individualTest7' =>$request->individualTest7,
-            
-          
         ]);
+         
+        
+        if (DB::table('users')->where('email', $usermail)->doesntExist()) {
+            $users = User::create([
+                'name' => $request->name,
+                'email' => $usermail
+            ]);
+        }
 
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
