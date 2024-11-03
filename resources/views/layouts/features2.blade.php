@@ -22,7 +22,7 @@
                                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                             </div>
                         </div>
-                        <a class="btn btn-info py-3 px-5 wow fadeIn" data-wow-delay="0.5s" href="">Explore More</a>
+                        <a class="btn btn-primary py-3 px-5 wow fadeIn" data-wow-delay="0.5s" href="">Explore More</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="bg-info p-5">
+                            <div class="bg-primary p-5">
                                 <div class="experience mb-4 wow fadeIn" data-wow-delay="0.3s">
                                     <div class="d-flex justify-content-between mb-2">
                                         <span class="text-white">Sample Preparation</span>

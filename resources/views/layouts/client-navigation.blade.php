@@ -18,23 +18,25 @@
 <!-- Topbar End -->
 
 <!-- Brand Start -->
-<div class="container-fluid bg-info text-white pt-4 pb-5 d-none d-lg-flex">
+<div class="container-fluid bg-primary text-white pb-3 d-none d-lg-flex">
     <div class="container pb-2">
         <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex">
-                <i class="bi bi-telephone-inbound fs-2"></i>
+            <a href="tel:(088) 828 5017"><i class="bi bi-telephone-inbound fs-2"></i></a>
                 <div class="ms-3">
                     <h5 class="text-white mb-0">Call Now</h5>
-                    
-                    <span>(088) 828 5017</span>
+                    <a href="tel:(088) 828 5017">(088) 828 5017</a>
                 </div>
             </div>
-            <a href="#" class="h1 text-white mb-0">SVF<span class="text-dark">CL</span></a>
+            <a href="/" class="h1 text-white mb-2">
+                <img src="/img/4.png" class="img-logo me-3 img-responsive" alt="SVFCL Logo" />
+            </a>
             <div class="d-flex">
-                <i class="bi bi-envelope fs-2"></i>
+                
+                <a href="mailto:st.vincentferrerclinlab@gmail.com"><i class="bi bi-envelope fs-2"></i></a>
                 <div class="ms-3">
                     <h5 class="text-white mb-0">Mail Now</h5>
-                    <span>st.vincentferrerclinlab@gmail.com</span>
+                    <a href="mailto:st.vincentferrerclinlab@gmail.com"><span>st.vincentferrerclinlab@gmail.com</span></a>
                 </div>
             </div>
         </div>
@@ -47,20 +49,20 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
             <a href="#" class="navbar-brand d-lg-none">
-                <h1 class="text-primary m-0">SVF<span class="text-dark">CL</span></h1>
+                <img src="/img/4.png" class="img-logo me-3 img-responsive" alt="SVFCL Logo" />
             </a>
             <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
+                <!-- <div class="navbar-nav">
                     <a href="#" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#services" class="nav-item nav-link">Services</a>
                     <a href="#home-service" class="nav-item nav-link">Contact</a>
                     
-                </div>    
+                </div>     -->
                          
                 
                 <!-- Navbar End 

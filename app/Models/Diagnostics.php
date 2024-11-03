@@ -34,7 +34,7 @@ class Diagnostics extends Authenticatable
         'individualTest4', 
         'individualTest5', 
         'individualTest6', 
-        'individualTest7' 
+        'individualTest7',
     ];
 
     /**

@@ -18,7 +18,7 @@
 <!-- Topbar End -->
 
 <!-- Brand Start -->
-<div class="container-fluid bg-info text-white pt-4 pb-5 d-none d-lg-flex">
+<div class="container-fluid bg-primary text-white pt-4 pb-5 d-none d-lg-flex">
     <div class="container pb-2">
         <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex">
@@ -29,9 +29,9 @@
                     <span>(088) 828 5017</span>
                 </div>
             </div>
-            <a href="#" class="h1 text-white mb-0">SVF<span class="text-dark">CL</span></a>
+            <a href="#" class="h1 text-white mb-3">SVF<span class="text-dark">CL</span></a>
             <div class="d-flex">
-                <i class="bi bi-envelope fs-2"></i>
+                <a href="mailto:st.vincentferrerclinlab@gmail.com"><i class="bi bi-envelope fs-2"></i></a>
                 <div class="ms-3">
                     <h5 class="text-white mb-0">Mail Now</h5>
                     <span>st.vincentferrerclinlab@gmail.com</span>
@@ -46,7 +46,7 @@
 <div class="container-fluid sticky-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3">
-            <a href="#" class="navbar-brand d-lg-none">
+            <a href="/" class="navbar-brand d-lg-none">
                 <h1 class="text-primary m-0">SVF<span class="text-dark">CL</span></h1>
             </a>
             <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
@@ -54,13 +54,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Home</a>
+                <!-- <div class="navbar-nav">
+                    <a href="/" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#services" class="nav-item nav-link">Services</a>
                     <a href="#home-service" class="nav-item nav-link">Contact</a>
                     
-                </div>    
+                </div>     -->
                          
                 
                 <!-- Navbar End 
@@ -72,7 +72,7 @@
                     <a class="btn btn-sm-square btn-primary ms-2" href=""><i class="fab fa-youtube"></i></a>
                 </div>-->
             </div>   
-            <div class="navbar-nav d-flex float-right">
+            <div class="navbar-nav d-flex float-end">
                 @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/dashboard') }}" class="nav-item nav-link float-end">

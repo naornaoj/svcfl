@@ -1,5 +1,5 @@
 <x-client-layout>
-    <form method="POST" action="{{ route('diagnostics') }}">
+    <form method="POST" action="{{ route('diagnostics-tailwind') }}">
         @csrf
         <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
         <!-- Name -->
