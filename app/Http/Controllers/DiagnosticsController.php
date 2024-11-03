@@ -21,7 +21,7 @@ use Illuminate\Http\Response;
 class DiagnosticsController extends Controller
 {
     /**
-     * Handle an incoming diagnostics request.
+     * Store the express-diagnostics's input form.
      */
     public function create(string $id)
     {
@@ -40,6 +40,7 @@ class DiagnosticsController extends Controller
     {
          $selectedIndividualId = $request->input('selectedIndividualId');
         // $selectedIndividualId = IndividualTest::first()->IndividualId;
+        $usermail = $request->email;
 
         $diagnostics = Diagnostics::create([
             'name' => $request->name,
@@ -60,20 +61,24 @@ class DiagnosticsController extends Controller
             'individualTest5' =>$request->individualTest5,
             'individualTest6' =>$request->individualTest6,
             'individualTest7' =>$request->individualTest7,
-            
-          
         ]);
+         
+        
+        if (DB::table('users')->where('email', $usermail)->doesntExist()) {
+            $users = User::create([
+                'name' => $request->name,
+                'email' => $usermail
+            ]);
+        }
 
         return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
     }
 
     public function packagesList()
     {
-
+    
         $packages = DB::table('packages')->select('id', 'packageName')->get();
         $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
-
-    
 
         return view('express-diagnostics', [
             'packages'=>$packages, 'individualTest'=>$individualTest
@@ -81,15 +86,15 @@ class DiagnosticsController extends Controller
 
     }
 
-    // public function individualTestList()
-    // {
-    //     $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+    public function individualTestList()
+    {
+        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
 
-    //     return view('express-diagnostics', [
-    //         'individualTest'=>$individualTest
-    //     ]);
+        return view('express-diagnostics', [
+            'individualTest'=>$individualTest
+        ]);
 
-    // }
+    }
 
     /**
      * Display the packages list.
@@ -119,7 +124,14 @@ class DiagnosticsController extends Controller
      */
     public function show(string $id)
     {
-       //
+        // $packages = DB::select('select * from packages where id = ? limit 1', [$id]);
+        // return response($packages);
+
+        // $packages = Packages::where('status', 1)->get();
+        //         foreach ($packages as $data){
+        //             $data->status = 0;
+        //             $data->update();
+        //         }
     }
 
 }
