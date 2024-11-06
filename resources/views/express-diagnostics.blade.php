@@ -112,35 +112,37 @@
                 <div class="tab-pane active" id="fill-tabpanel-1" role="tabpanel" aria-labelledby="fill-tab-1">
                     <!-- Lab request-Package -->
                     <div class="col-md-6 mt-1">
-                        <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
-                        <option></option>
-                                @foreach($packages as $package)
-                                <option value="{{$package->packageName}}">{{$package->packageName}}</option>
-                                @endforeach 
-                        </select>
+                    <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
+                    <option>Select a Package</option>
                         
-                        <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
-                        <option></option>
-                                @foreach($packages as $package)
-                                <option value="{{ $package->packageName }}" @if ($package->packageName == "package2"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
-                                @endforeach 
-                        </select>
+                        @foreach($packages as $package)
+                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                         
-                        <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
-                        <option></option>
-                                @foreach($packages as $package)
-                                <option value="{{ $package->packageName }}" @if ($package->packageName == "package3"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
-                                @endforeach 
+                        @endforeach
+                    </select>
+                    
+                    <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
+                    <option>Select a Package</option>
+                            @foreach($packages as $package)
+                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                            @endforeach 
+                    </select>
+                    
+                    <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
+                    <option>Select a Package</option>
+                            @foreach($packages as $package)
+                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                            @endforeach 
+                    </select>
+    
+                    <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
+                    <option>Select a Package</option>
+                            @foreach($packages as $package)
+                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                            @endforeach 
                         </select>
-
-                        <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
-                        <option></option>
-                                @foreach($packages as $package)
-                                <option value="{{ $package->packageName }}" @if ($package->packageName == "package4"){{'selected="selected"'}}@endif>{{ $package->packageName }}</option>
-                                @endforeach 
-                        </select>
-                    </div>
                 </div>
+                <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
             </div>
             <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
         </div>
