@@ -9,7 +9,6 @@ use App\Models\IndividualTest;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Results;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
@@ -17,6 +16,7 @@ use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Response;
+use Illuminate\Http\Results;
 
 class ResultsController extends Controller
 {
@@ -43,24 +43,24 @@ class ResultsController extends Controller
         $usermail = $request->email;
 
         $results = Results::create([
-            'name' => $request->name,
-            'age' => $request->age,
-            'gender' => $request->gender,
-            'contact' => $request->contact,
-            'address' => $request->address,
-            'email' => $usermail,
-            'reqphysician' =>$request->reqphysician,
-            'package1' =>$request->package1,
-            'package2' =>$request->package2,
-            'package3' =>$request->package3,
-            'package4' =>$request->package4,
-            'individualTest1' =>$request->individualTest1,
-            'individualTest2' =>$request->individualTest2,
-            'individualTest3' =>$request->individualTest3,
-            'individualTest4' =>$request->individualTest4,
-            'individualTest5' =>$request->individualTest5,
-            'individualTest6' =>$request->individualTest6,
-            'individualTest7' =>$request->individualTest7,
+            'id' => $request->id,
+            'patientNo' => $request->patientNo,
+            'requestNo' => $request->requestNo,
+            'hematocrit' => $request->hematocrit,
+            'hgb' => $request->hgb,
+            'neutro' => $request->neutro,
+            'lympho' => $request->lympho,
+            'mono' => $request->mono,
+            'eosino' => $request->eosino,
+            'baso' => $request->baso,
+            'cbcWbc' => $request->cbcWbc,
+            'cbcRbc'=> $request->cbcRbc, 
+            'platelet' => $request->platelet, 
+            'bloodType' => $request->bloodType,
+            'cbcRemarks' => $request->cbcRemarks, 
+            'uaColor' => $request->uaColor, 
+            'transparency' => $request->transparency, 
+            'ph' => $request-> ph,
         ]);
          
         
