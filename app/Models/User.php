@@ -41,7 +41,8 @@ class User extends Authenticatable
     protected $attributes = [
         'isActive' => true,
         'lname' => '',
-        'role' => 'client'
+        'role' => 'client',
+        'password' => ''
     ];
 
     /**
