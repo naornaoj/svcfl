@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\Results;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
-use Illuminate\Http\Results;
+
 
 class ResultsController extends Controller
 {
@@ -51,17 +52,97 @@ class ResultsController extends Controller
             'uaColor' => $request->uaColor, 
             'transparency' => $request->transparency, 
             'ph' => $request->ph,
+            'sgravity' > $request->sgravity,
+            'protein' > $request->protein,
+            'glucose' > $request->glucose,
+            'ec' > $request->ec,
+            'mt' > $request->mt,
+            'bacteria' > $request->bacteria,
+            'cast' > $request->cast,
+            'crystal' > $request->crystal,
+            'amorphous' > $request->amorphous,
+            'microOrganism' > $request->microOrganism,
+            'others' > $request->others,
+            'uaRbc' > $request->uaRbc,
+            'uaWbc' > $request->uaWbc,
+            'seColor' > $request->seColor,
+            'seConsistency' > $request->seConsistency,
+            'seWbc' > $request->seWbc,
+            'seRbc' > $request->seRbc,
+            'amoeba' > $request->amoeba,
+            'eColi' > $request->eColi,
+            'eHistolica' > $request->eHistolica,
+            'hookworm' > $request->hookworm,
+            'whipworm' > $request->whipworm,
+            'pinworm' > $request->pinworm,
+            'yeastCells' > $request->yeastCells,
+            'ascaris' > $request->ascaris,
+            'giardiaLamblia' > $request->giardiaLamblia,
+            'seOthers' > $request->seOthers,
+            'occultBlood' > $request->occultBlood,
+            'seRemark' > $request->seRemark,
+            'hepaB' > $request->hepaB,
+            'hepaA' > $request->hepaA,
+            'hiv' > $request->hiv,
+            'hssAgQualitative' > $request->hssAgQualitative,
+            'hBsAgQuantitative' > $request->hBsAgQuantitative,
+            'hBsAgValueQuantitative' > $request->hBsAgValueQuantitative,
+            'syphilis' > $request->syphilis,
+            'pTSerum' > $request->pTSerum,
+            'pTUrine' > $request->pTUrine,
+            'rATest' > $request->rATest,
+            'fbs' > $request->fbs,
+            'rbs' > $request->rbs,
+            'HPPS2' > $request->HPPS2,
+            'hBA1C' > $request->hBA1C,
+            'oGTT50g' > $request->oGTT50g,
+            'oGTT75gFullFasting' > $request->oGTT75gFullFasting,
+            'oGTT75gAfter1hour' > $request->oGTT75gAfter1hour,
+            'oGTT75gAfter2hours' > $request->oGTT75gAfter2hours,
+            'alp' > $request->alp,
+            'cholines' > $request->cholines,
+            'sGPT' > $request->sGPT,
+            'sGOT' > $request->sGOT,
+            'sodium' > $request->sodium,
+            'potasium' > $request->potasium,
+            'ica' > $request->ica,
+            'chloride' > $request->chloride,
+            'cholesterol' > $request->cholesterol,
+            'triglyceride' > $request->triglyceride,
+            'hdl' > $request->hdl,
+            'ldl' > $request->ldl,
+            'vldl' > $request->vldl,
+            'bua' > $request->bua,
+            'bun' > $request->bun,
+            'creatine' > $request->creatine,
+            'tProtein' > $request->tProtein,
+            'albumin' > $request->albumin,
+            'globulin' > $request->globulin,
+            'chemNote' > $request->chemNote,
+            'timeReceived1' > $request->timeReceived1,
+            'timeReleased1' > $request->timeReleased1,
+            'unit1' > $request->unit1,
+            'timeReleased2' > $request->timeReleased2,
+            'timeReceived2' > $request->timeReceived2,
+            'unit2' > $request->unit2,
+            'noteSputum' > $request->noteSputum,
+            'tSH' > $request->tSH,
+            'fT4' > $request->fT4,
+            'fT3' > $request->fT3,
+            't3' > $request->t3,
+            't4' > $request->t4,
+            'noteThyroid' > $request->noteThyroid,
         ]);
          
         
-        if (DB::table('users')->where('email', $usermail)->doesntExist()) {
+        if (DB::table('results')->where('email', $usermail)->doesntExist()) {
             $users = User::create([
                 'name' => $request->name,
                 'email' => $usermail
             ]);
         }
 
-        return redirect(route('express-diagnostics', absolute: false))->with('success', 'Sucessfully Saved!');
+        return redirect(route('results', absolute: false))->with('success', 'Results Sucessfully Saved!');
     }
 
     public function packagesList()
