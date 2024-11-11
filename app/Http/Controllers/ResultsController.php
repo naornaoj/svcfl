@@ -2,19 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
-use App\Http\Controllers\PackagesController;
-use App\Http\Controllers\IndivualTestController;
-use App\Models\Packages;
-use App\Models\IndividualTest;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
-use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Response;
 use Illuminate\Http\Results;
 
@@ -60,7 +50,7 @@ class ResultsController extends Controller
             'cbcRemarks' => $request->cbcRemarks, 
             'uaColor' => $request->uaColor, 
             'transparency' => $request->transparency, 
-            'ph' => $request-> ph,
+            'ph' => $request->ph,
         ]);
          
         
