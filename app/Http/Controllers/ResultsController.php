@@ -152,27 +152,27 @@ class ResultsController extends Controller
         return redirect(route('results', absolute: false))->with('success', 'Results Sucessfully Saved!');
     }
 
-    public function packagesList()
-    {
+    // public function packagesList()
+    // {
     
-        $packages = DB::table('packages')->select('id', 'packageName')->get();
-        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+    //     $packages = DB::table('packages')->select('id', 'packageName')->get();
+    //     $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
 
-        return view('express-diagnostics', [
-            'packages'=>$packages, 'individualTest'=>$individualTest
-        ]);
+    //     return view('express-diagnostics', [
+    //         'packages'=>$packages, 'individualTest'=>$individualTest
+    //     ]);
 
-    }
+    // }
 
-    public function individualTestList()
-    {
-        $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
+    // public function individualTestList()
+    // {
+    //     $individualTest = DB::table('individualtest')->select('id', 'individualTest')->get();
 
-        return view('express-diagnostics', [
-            'individualTest'=>$individualTest
-        ]);
+    //     return view('express-diagnostics', [
+    //         'individualTest'=>$individualTest
+    //     ]);
 
-    }
+    // }
 
     /**
      * Display the packages list.

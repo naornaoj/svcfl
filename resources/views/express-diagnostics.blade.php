@@ -113,7 +113,7 @@
                     <!-- Lab request-Package -->
                     <div class="col-md-6 mt-1">
                     <select id="package1" class="form-select mt-3" aria-label="Default select example" name="package1">
-                    <option>Select a Package</option>
+                    <option selected></option>
                         
                         @foreach($packages as $package)
                             <option value="{{ $package->id }}">{{ $package->packageName }}</option>
@@ -122,27 +122,27 @@
                     </select>
                     
                     <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
-                    <option>Select a Package</option>
+                    <option selected></option>
                             @foreach($packages as $package)
                             <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                             @endforeach 
                     </select>
                     
                     <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
-                    <option>Select a Package</option>
+                    <option selected></option>
                             @foreach($packages as $package)
                             <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                             @endforeach 
                     </select>
     
                     <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
-                    <option>Select a Package</option>
+                    <option selected></option>
                             @foreach($packages as $package)
                             <option value="{{ $package->id }}">{{ $package->packageName }}</option>
                             @endforeach 
                         </select>
                 </div>
-                <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
+                <!-- <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit"> -->
             </div>
             <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
         </div>
