@@ -12,7 +12,7 @@ use Illuminate\Http\Response;
 class ResultsController extends Controller
 {
     /**
-     * Store the express-diagnostics's input form.
+     * Store the data from results input form.
      */
     public function create(string $id)
     {
