@@ -28,11 +28,11 @@
             <div class="grid md:grid-cols-12 md:gap-4 ">
                 <div class="relative z-0 mb-5 group col-span-3">
                     <label for="req_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">REQUEST NO</label>
-                    <input type="text" id="req_no" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
+                    <input type="text" id="requestNo" name="requestNo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
                 </div>
                 <div class="relative z-0 mb-5 group col-span-6">
-                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">PATIENT NAME</label>
-                    <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
+                    <label for="patientName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">PATIENT NAME</label>
+                    <input type="text" id="patientName" name="patientName class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
                 </div>                
                 <div class="relative z-0 mb-5 group col-span-3">
                     <label for="or_no" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">OR NO</label>
@@ -101,7 +101,7 @@
                 data: data,
                 success: function(response) {
                     // Handle the response (e.g., update UI)
-                    $('#req_no').val(response[0].id);
+                    $('#requestNo').val(response[0].id);
                     $('#name').val(response[0].name);
                     $('#age').val(response[0].age);
                     $('#gender').val(response[0].gender);
