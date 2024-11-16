@@ -1,6 +1,7 @@
 <x-client-layout>
     <div class="container rounded">
         <form class="row g-3" method="POST" action="{{ route('express-diagnostics') }}">
+
             @csrf
             <h1 class="text-center font-bold text-xl mt-4" >Express Diagnostics</h1>
             @if(session()->has('success'))
@@ -145,8 +146,6 @@
                 <!-- <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit"> -->
             </div>
             <input type="submit" class="btn btn-primary btn-lg my-3" name="submit" value="Submit">
-        
-            
         </form>
         
         <!-- Back to Top -->
