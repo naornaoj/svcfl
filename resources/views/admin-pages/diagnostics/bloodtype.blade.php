@@ -35,7 +35,7 @@
       <script src="html5-qrcode.min.js"></script>
     </head>
     <body >
-    <x-app-layout>
+    <x-admin-layout>
         <div class="bg-white mb-2 dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
             <div class="mx-2 my-2">
                 <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">Search Patient</h4>
@@ -124,7 +124,7 @@
                 </div>
             </form>
         </div>
-    </x-app-layout>
+    </x-admin-layout>
 
     <script>
         function getInfo() {
