@@ -1,5 +1,5 @@
 <x-app-layout>
-        <form class="row g-3" method="POST" action="{{ route('admin-pages/diagnostics/bloodtype') }}">
+        
             <div class="bg-white mb-2 dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
                 <div class="mx-2 my-2">
                     <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">Search Patient</h4>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="bg-white dark:bg-gray-800 relative overflow-x-auto shadow-md sm:rounded-lg">
-                <form class="mx-2 my-2">
+                <form class="row g-3" method="POST" action="{{ route('/diagnostics/search) }}">
                     <h4 class="text-center text-2xl font-bold dark:text-white mx-auto">BLOOD TYPING</h4>
                     <div class="grid md:grid-cols-12 md:gap-4 ">
                         <div class="relative z-0 mb-5 group col-span-3">
@@ -84,11 +84,10 @@
                         <div class="relative z-0 mb-5 group col-span-3">
                             <button type="submit" name="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">SAVE</button>
                         </div>
-                    
                     </div>
                 </form>
             </div>
-        </form>
+        
 </x-app-layout>
 
 <script>
