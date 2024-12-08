@@ -33,7 +33,7 @@ Route::middleware('guest')->group(function () {
     Route::post('express-diagnostics', [DiagnosticsController::class, 'store'])
                 ->name('express-diagnostics');
     
-    Route::post('/admin-pages/diagnostics/bloodtype', [ResultsController::class, 'store'])->name('/admin-pages/diagnostics/bloodtype');
+    Route::post('/diagnostics/bloodtype', [ResultsController::class, 'store'])->name('/diagnostics/bloodtype');
 
     // Route::post('packages', [PackagesController::class, 'create'])
     //            ->name('packages');
