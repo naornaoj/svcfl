@@ -116,7 +116,7 @@
                     <option selected></option>
                         
                         @foreach($packages as $package)
-                            <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                            <option value="{{ $package->packageName }}">{{ $package->packageName }}</option>
                         
                         @endforeach
                     </select>
@@ -124,21 +124,21 @@
                     <select id="package2" class="form-select mt-3" aria-label="Default select example" name="package2">
                     <option selected></option>
                         @foreach($packages as $package)
-                        <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                        <option value="{{ $package->packageName }}">{{ $package->packageName }}</option>
                         @endforeach 
                     </select>
                     
                     <select id="package3" class="form-select mt-3" aria-label="Default select example" name="package3">
                     <option selected></option>
                         @foreach($packages as $package)
-                        <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                        <option value="{{ $package->packageName }}">{{ $package->packageName }}</option>
                         @endforeach 
                     </select>
     
                     <select id="package4" class="form-select mt-3" aria-label="Default select example" name="package4">
                     <option selected></option>
                         @foreach($packages as $package)
-                        <option value="{{ $package->id }}">{{ $package->packageName }}</option>
+                        <option value="{{ $package->packageName }}">{{ $package->packageName }}</option>
                         @endforeach 
                     </select>
                 </div>
