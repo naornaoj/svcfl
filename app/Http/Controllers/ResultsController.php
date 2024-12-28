@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Results;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
 
+use Illuminate\View\View;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ResultsController extends Controller
 {
@@ -29,7 +31,9 @@ class ResultsController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $usermail = $request->email;
+        //$results = $request->input('selectedIndividualId');
+        // $selectedIndividualId = IndividualTest::first()->IndividualId;
+        // $usermail = $request->email;
 
         $results = Results::create([
             'id' => $request->id,
@@ -140,12 +144,12 @@ class ResultsController extends Controller
         ]);
          
         
-        if (DB::table('results')->where('email', $usermail)->doesntExist()) {
-            $users = User::create([
-                'name' => $request->name,
-                'email' => $usermail
-            ]);
-        }
+        // if (DB::table('results')->where('email', $usermail)->doesntExist()) {
+        //     $users = User::create([
+        //         'name' => $request->name,
+        //         'email' => $usermail
+        //     ]);
+        // }
 
         return redirect(route('results', absolute: false))->with('success', 'Results Sucessfully Saved!');
     }
